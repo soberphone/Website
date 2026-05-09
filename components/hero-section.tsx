@@ -29,7 +29,7 @@ export function HeroSection() {
             src="/images/orb.png"
             alt="Ethereal orb"
             fill
-            className="object-contain drop-shadow-2xl mix-blend-multiply"
+            className="object-contain drop-shadow-2xl"
             priority
           />
         </div>
