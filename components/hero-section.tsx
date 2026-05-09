@@ -23,8 +23,8 @@ export function HeroSection() {
       />
 
       {/* Floating orb */}
-      <div className="relative mb-8 md:mb-12 animate-float">
-        <div className="relative w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72">
+      <div className="relative mb-8 md:mb-12 animate-float" style={{ perspective: "1000px" }}>
+        <div className="relative w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 animate-spin-slow" style={{ transformStyle: "preserve-3d" }}>
           <Image
             src="/images/orb.png"
             alt="Ethereal orb"
