@@ -24,7 +24,7 @@ export function HeroSection() {
 
       {/* Floating orb */}
       <div className="relative mb-8 md:mb-12 animate-float">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+        <div className="relative w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72">
           <Image
             src="/images/orb.png"
             alt="Ethereal orb"
