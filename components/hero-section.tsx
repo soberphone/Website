@@ -1,8 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { EtherealOrb } from "@/components/ethereal-orb"
 import { ArrowDown } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -23,8 +23,16 @@ export function HeroSection() {
       />
 
       {/* Floating orb */}
-      <div className="relative mb-8 md:mb-12">
-        <EtherealOrb size="xl" />
+      <div className="relative mb-8 md:mb-12 animate-float">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+          <Image
+            src="/images/orb.png"
+            alt="Ethereal orb"
+            fill
+            className="object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
       </div>
 
       {/* Content */}
