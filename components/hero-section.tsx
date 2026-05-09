@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-32 md:pt-40">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 -z-10"
