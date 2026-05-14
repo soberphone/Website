@@ -58,8 +58,8 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              className="rounded-full px-6 bg-foreground text-background hover:bg-foreground/90"
+            <Button
+              className="rounded-full px-6 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
             >
               Get Early Access
             </Button>
@@ -100,8 +100,8 @@ export function Header() {
               >
                 Community
               </Link>
-              <Button 
-                className="rounded-full mt-2 bg-foreground text-background hover:bg-foreground/90"
+              <Button
+                className="rounded-full mt-2 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
               >
                 Get Early Access
               </Button>

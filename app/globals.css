@@ -153,10 +153,10 @@
 
 @keyframes spin-slow {
   0% {
-    transform: rotateX(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotateX(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -166,4 +166,22 @@
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+}
+
+@keyframes orb-drift {
+  0% { transform: translateY(-5vh); }
+  100% { transform: translateY(65vh); }
+}
+
+@keyframes orb-sway {
+  0% { transform: translateX(-30px); }
+  100% { transform: translateX(calc(100vw - 320px)); }
+}
+
+.animate-orb-drift {
+  animation: orb-drift 25s ease-in-out infinite alternate;
+}
+
+.animate-orb-sway {
+  animation: orb-sway 10s ease-in-out infinite alternate;
 }

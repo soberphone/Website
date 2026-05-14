@@ -60,7 +60,7 @@ export function CTASection() {
               <Button 
                 type="submit"
                 size="lg"
-                className="rounded-full px-8 py-6 bg-foreground text-background hover:bg-foreground/90 shadow-lg whitespace-nowrap"
+                className="rounded-full px-8 py-6 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg whitespace-nowrap"
               >
                 Join Waitlist
               </Button>

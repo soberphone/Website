@@ -1,6 +1,6 @@
 "use client"
 
-import { EtherealOrb } from "@/components/ethereal-orb"
+import Image from "next/image"
 
 export function PhilosophySection() {
   return (
@@ -50,7 +50,16 @@ export function PhilosophySection() {
 
           {/* Orb Visual */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <EtherealOrb size="lg" />
+            <div className="relative animate-float">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 animate-spin-slow">
+                <Image
+                  src="/images/orb.png"
+                  alt="Ethereal orb"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
