@@ -1,9 +1,29 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 import Image from "next/image"
 import { PhoneMockup } from "@/components/phone-mockup"
+
+type Tier = "sm" | "md" | "lg" | "xl"
+
+function useViewportTier(): Tier {
+  const [tier, setTier] = useState<Tier>("md")
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth
+      if (w >= 1280) setTier("xl")
+      else if (w >= 1024) setTier("lg")
+      else if (w >= 640) setTier("md")
+      else setTier("sm")
+    }
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [])
+  return tier
+}
 
 export function HeroSection() {
   return (
@@ -40,22 +60,21 @@ export function HeroSection() {
       </div>
 
       <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        {/* Phones (left on desktop, below on mobile) */}
-        <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+        {/* Phones (left on desktop, above text on mobile/tablet) */}
+        <div className="flex justify-center lg:justify-start">
           <PhoneLayered />
         </div>
 
         {/* Content */}
-        <div className="order-1 lg:order-2 flex flex-col items-center text-center max-w-2xl mx-auto">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-foreground mb-6">
-            <span className="block whitespace-nowrap">Break the spell.</span>
-            <span className="block italic">Together.</span>
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto lg:-translate-x-[34px] xl:translate-x-0">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight text-foreground mb-6">
+            <span className="block whitespace-nowrap">The social solution</span>
+            <span className="block whitespace-nowrap">for getting off your screen.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-pretty">
-            Soberphone is for the fed-up and ready. It offers first-of-its-kind
-            tools to get you off your screen, with a real support system
-            that drives lasting change.
+            Break the spell with Soberphone. Go beyond willpower with tools and
+            support systems that work.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -85,20 +104,33 @@ export function HeroSection() {
 }
 
 function PhoneLayered() {
+  const tier = useViewportTier()
+  const s = {
+    sm: { back: 110, front: 130, h: 290, w: 310, top: 24 },
+    md: { back: 130, front: 150, h: 330, w: 360, top: 28 },
+    lg: { back: 130, front: 150, h: 330, w: 340, top: 28 },
+    xl: { back: 175, front: 200, h: 430, w: 460, top: 36 },
+  }[tier]
+
   return (
-    <div className="relative mx-auto h-[360px] sm:h-[400px] lg:h-[460px] w-full max-w-[420px]">
+    <div
+      className="relative mx-auto"
+      style={{ width: `${s.w}px`, height: `${s.h}px` }}
+    >
       {/* Back-left: Chat */}
       <PhoneMockup
         src="/images/screen-chat.png"
         alt="Soberphone chat with supporters"
-        className="absolute left-0 top-6 sm:top-8 w-[140px] sm:w-[160px] lg:w-[180px] -rotate-[10deg] origin-bottom-right"
+        width={s.back}
+        className="absolute left-8 top-8 -rotate-[10deg] origin-bottom-right"
       />
 
       {/* Back-right: Goals */}
       <PhoneMockup
         src="/images/screen-goals.png"
         alt="Soberphone goals dashboard"
-        className="absolute right-0 top-6 sm:top-8 w-[140px] sm:w-[160px] lg:w-[180px] rotate-[10deg] origin-bottom-left"
+        width={s.back}
+        className="absolute right-8 top-8 rotate-[10deg] origin-bottom-left"
       />
 
       {/* Front-center: Orb */}
@@ -106,7 +138,8 @@ function PhoneLayered() {
         src="/images/screen-orb.png"
         alt="Soberphone home with ethereal orb"
         priority
-        className="absolute left-1/2 -translate-x-1/2 top-0 z-10 w-[160px] sm:w-[180px] lg:w-[210px]"
+        width={s.front}
+        className="absolute left-1/2 -translate-x-1/2 top-0 z-10"
       />
     </div>
   )
