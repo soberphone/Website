@@ -69,12 +69,12 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto lg:-translate-x-[34px] xl:translate-x-0">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight text-foreground mb-6">
             <span className="block whitespace-nowrap">The social solution</span>
-            <span className="block whitespace-nowrap">for getting off your screen.</span>
+            <span className="block whitespace-nowrap">for staying off your screens.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-pretty">
             Break the spell with Soberphone. Go beyond willpower with tools and
-            support systems that work.
+            support systems that motivate real change.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
