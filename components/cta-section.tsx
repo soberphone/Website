@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { EtherealOrb } from "@/components/ethereal-orb"
 
 export function CTASection() {
   const [email, setEmail] = useState("")
@@ -31,9 +31,15 @@ export function CTASection() {
       />
 
       <div className="max-w-4xl mx-auto text-center">
-        {/* Small Orb */}
+        {/* Logo */}
         <div className="flex justify-center mb-8">
-          <EtherealOrb size="md" />
+          <Image
+            src="/images/soberphone-logo-mark.png"
+            alt="Soberphone"
+            width={180}
+            height={260}
+            className="w-28 md:w-32 h-auto"
+          />
         </div>
 
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-foreground mb-6 text-balance">

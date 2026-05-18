@@ -1,80 +1,56 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
 import Image from "next/image"
-import { PhoneMockup } from "@/components/phone-mockup"
 
-type Tier = "sm" | "md" | "lg" | "xl"
-
-function useViewportTier(): Tier {
-  const [tier, setTier] = useState<Tier>("md")
-  useEffect(() => {
-    const update = () => {
-      const w = window.innerWidth
-      if (w >= 1280) setTier("xl")
-      else if (w >= 1024) setTier("lg")
-      else if (w >= 640) setTier("md")
-      else setTier("sm")
-    }
-    update()
-    window.addEventListener("resize", update)
-    return () => window.removeEventListener("resize", update)
-  }, [])
-  return tier
-}
+const orbStates = [
+  { src: "/images/orbs/struggling.png", label: "Struggling" },
+  { src: "/images/orbs/difficult.png", label: "Difficult" },
+  { src: "/images/orbs/okay.png", label: "Okay" },
+  { src: "/images/orbs/great.png", label: "Great" },
+  { src: "/images/orbs/vibrant.png", label: "Vibrant" },
+]
 
 export function HeroSection() {
   return (
-    <section className="relative isolate min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-[8px] md:pt-[40px]">
-      {/* Background gradient */}
+    <section className="relative isolate flex flex-col items-center px-6 pt-24 md:pt-32 pb-0 overflow-hidden">
+      {/* Background gradient — mirrors the app's AppGradientBackground (white center → #D0DFFF edge) */}
       <div
         className="absolute inset-0 -z-10"
         style={{
-          background: `
-            linear-gradient(
-              180deg,
-              oklch(0.95 0.03 270) 0%,
-              oklch(0.97 0.01 280) 50%,
-              oklch(0.98 0.005 60) 100%
-            )
-          `,
+          background:
+            "radial-gradient(circle at 50% 50%, #ffffff 0%, #ffffff 40%, #D0DFFF 100%)",
         }}
       />
 
-      {/* Blurred drifting orb (matches app's goals page) */}
-      <div className="absolute inset-0 -z-[5] overflow-hidden pointer-events-none" aria-hidden>
-        <div className="animate-orb-drift absolute top-0 left-0">
-          <div className="animate-orb-sway">
-            <Image
-              src="/images/orb.png"
-              alt=""
-              width={300}
-              height={300}
-              className="blur-[60px] opacity-50"
-              aria-hidden
-            />
-          </div>
-        </div>
-      </div>
+<div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
+        <Image
+          src="/images/soberphone-logo-mark.png"
+          alt="Soberphone"
+          priority
+          width={180}
+          height={260}
+          className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto mb-3"
+        />
 
-      <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        {/* Phones (left on desktop, above text on mobile/tablet) */}
-        <div className="flex justify-center lg:justify-start">
-          <PhoneLayered />
-        </div>
-
-        {/* Content */}
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto lg:-translate-x-[34px] xl:translate-x-0">
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight text-foreground mb-6">
-            <span className="block whitespace-nowrap">The social solution</span>
-            <span className="block whitespace-nowrap">for staying off your screens.</span>
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+          <h1
+            className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
+            style={{
+              backgroundImage:
+                "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
+            }}
+          >
+            Find freedom from your screen.
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-pretty">
-            Break the spell with Soberphone. Go beyond willpower with tools and
-            support systems that motivate real change.
+          <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
+            Willpower, blockers, and hyper-gamification not working?
+          </h2>
+
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
+            Get to the root with a social solution that motivates real change.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -85,62 +61,36 @@ export function HeroSection() {
               Join the Waitlist
             </Button>
             <Button
+              asChild
               variant="ghost"
               size="lg"
               className="rounded-full px-8 py-6 text-base text-muted-foreground hover:text-foreground hover:bg-muted/50"
             >
-              Learn More
+              <Link href="/features">Learn More</Link>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="w-5 h-5 text-muted-foreground/50" />
+      {/* Orb spectrum row — tops poke above the fold, struggling → vibrant L→R.
+          Negative -mx-6 breaks out of the section's px-6 so orbs can run nearly edge-to-edge. */}
+      <div className="w-[calc(100%+3rem)] -mx-6 mt-[135px] grid grid-cols-5 gap-x-1 sm:gap-x-2 md:gap-x-3 items-end">
+        {orbStates.map((orb) => (
+          <div key={orb.src} className="flex flex-col items-center w-full">
+            {/* aspect-[2/1] + overflow-hidden hides the bottom half of the square orb */}
+            <div className="w-full max-w-[260px] aspect-[2/1] overflow-hidden">
+              <Image
+                src={orb.src}
+                alt={orb.label}
+                width={512}
+                height={512}
+                className="w-full h-auto select-none"
+                draggable={false}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
-  )
-}
-
-function PhoneLayered() {
-  const tier = useViewportTier()
-  const s = {
-    sm: { back: 110, front: 130, h: 290, w: 310, top: 24 },
-    md: { back: 130, front: 150, h: 330, w: 360, top: 28 },
-    lg: { back: 130, front: 150, h: 330, w: 340, top: 28 },
-    xl: { back: 175, front: 200, h: 430, w: 460, top: 36 },
-  }[tier]
-
-  return (
-    <div
-      className="relative mx-auto"
-      style={{ width: `${s.w}px`, height: `${s.h}px` }}
-    >
-      {/* Back-left: Chat */}
-      <PhoneMockup
-        src="/images/screen-chat.png"
-        alt="Soberphone chat with supporters"
-        width={s.back}
-        className="absolute left-8 top-8 -rotate-[10deg] origin-bottom-right"
-      />
-
-      {/* Back-right: Goals */}
-      <PhoneMockup
-        src="/images/screen-goals.png"
-        alt="Soberphone goals dashboard"
-        width={s.back}
-        className="absolute right-8 top-8 rotate-[10deg] origin-bottom-left"
-      />
-
-      {/* Front-center: Orb */}
-      <PhoneMockup
-        src="/images/screen-orb.png"
-        alt="Soberphone home with ethereal orb"
-        priority
-        width={s.front}
-        className="absolute left-1/2 -translate-x-1/2 top-0 z-10"
-      />
-    </div>
   )
 }

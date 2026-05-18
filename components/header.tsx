@@ -34,28 +34,6 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="#features"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Features
-            </Link>
-            <Link
-              href="#philosophy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Philosophy
-            </Link>
-            <Link
-              href="#community"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Community
-            </Link>
-          </div>
-
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
@@ -79,27 +57,6 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg border-b border-border/50 shadow-lg">
             <div className="flex flex-col p-6 gap-4">
-              <Link
-                href="#features"
-                className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Features
-              </Link>
-              <Link
-                href="#philosophy"
-                className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Philosophy
-              </Link>
-              <Link
-                href="#community"
-                className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Community
-              </Link>
               <Button
                 className="rounded-full mt-2 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
               >

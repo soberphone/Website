@@ -24,26 +24,26 @@ export function PhilosophySection() {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <p className="text-sm uppercase tracking-widest text-primary font-medium mb-4">
-              Our Philosophy
+              The Approach
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-foreground mb-8 text-balance">
-              Healing happens in connection, not isolation
+              Our devices have a powerful psychological hold on us.
             </h2>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                There are many productivity and screen time apps out there. But none of them 
-                go deep enough. They treat the symptom—too much screen time—without 
-                addressing the cause: our fundamental human need for connection.
+                Fortunately we&rsquo;ve learned what works. Behavioral research tells us that
+                social support is foundational for change to take root and mature.
               </p>
               <p>
-                Soberphone is different. We believe that lasting change comes from being 
-                seen, supported, and accountable to people who care about us. Not from 
-                willpower alone. Not from shame. Not from restriction.
+                Lasting change comes from being seen, supported, and accountable to people
+                who care about us. Not from willpower alone. Not from simple restriction.
+                Not from hyper-gamification.
               </p>
               <p className="text-foreground font-medium">
-                We&apos;re building a platform where your friends become your safety net. 
-                Where vulnerability is strength. Where we free ourselves from our screens—together.
+                To transform your life: decide what tech you struggle with, set goals for
+                your ideal use, and invite people you trust to support your journey.
+                They&rsquo;ll be invited to check in when you go over a goal.
               </p>
             </div>
           </div>
