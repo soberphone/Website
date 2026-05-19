@@ -185,3 +185,13 @@
 .animate-orb-sway {
   animation: orb-sway 10s ease-in-out infinite alternate;
 }
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-left 40s linear infinite;
+  will-change: transform;
+}

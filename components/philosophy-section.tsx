@@ -4,7 +4,10 @@ import Image from "next/image"
 
 export function PhilosophySection() {
   return (
-    <section id="philosophy" className="py-24 md:py-32 px-6 relative overflow-hidden">
+    <section
+      id="philosophy"
+      className="relative pt-24 md:pt-32 pb-[180px] px-6 overflow-hidden"
+    >
       {/* Background */}
       <div 
         className="absolute inset-0 -z-10"
@@ -20,46 +23,52 @@ export function PhilosophySection() {
       />
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
-          <div className="order-2 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-20 items-center">
+          {/* Left: text */}
+          <div>
             <p className="text-sm uppercase tracking-widest text-primary font-medium mb-4">
-              The Approach
+              The Philosophy
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-foreground mb-8 text-balance">
-              Our devices have a powerful psychological hold on us.
+            <h2 className="font-serif font-medium leading-tight tracking-tight text-foreground mb-8 text-balance text-3xl md:text-4xl lg:text-5xl">
+              Take back your agency with Soberphone
             </h2>
-            
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed -translate-y-[12px]">
               <p>
-                Fortunately we&rsquo;ve learned what works. Behavioral research tells us that
-                social support is foundational for change to take root and mature.
+                Behavioral research says{" "}
+                <span
+                  className="font-semibold text-2xl md:text-3xl lg:text-4xl leading-tight whitespace-nowrap bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(270deg, #6FA3F7 0%, #8FB4FF 30%, #F4A988 75%, #FFD68A 100%)",
+                  }}
+                >
+                  social support
+                </span>
+                <br />
+                is essential for human development and transformation.
               </p>
               <p>
                 Lasting change comes from being seen, supported, and accountable to people
                 who care about us. Not from willpower alone. Not from simple restriction.
                 Not from hyper-gamification.
               </p>
-              <p className="text-foreground font-medium">
-                To transform your life: decide what tech you struggle with, set goals for
-                your ideal use, and invite people you trust to support your journey.
-                They&rsquo;ll be invited to check in when you go over a goal.
+              <p className="text-foreground font-medium" data-philosophy-anchor>
+                When we take our struggles out of isolation and embed them in community
+                and connection, our lives begin to change at the root.
               </p>
             </div>
           </div>
 
-          {/* Orb Visual */}
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative animate-float">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 animate-spin-slow">
-                <Image
-                  src="/images/orb.png"
-                  alt="Ethereal orb"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                />
-              </div>
-            </div>
+          {/* Right: line drawing */}
+          <div className="flex justify-center">
+            <Image
+              src="/images/social-support.png"
+              alt="Line drawing of figures helping each other out of a phone"
+              width={1024}
+              height={559}
+              className="w-full max-w-md md:max-w-lg lg:max-w-sm xl:max-w-lg h-auto"
+            />
           </div>
         </div>
       </div>

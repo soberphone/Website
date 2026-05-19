@@ -1,21 +1,10 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
 export function CTASection() {
-  const [email, setEmail] = useState("")
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle email submission
-    setIsSubmitted(true)
-  }
-
   return (
-    <section className="py-24 md:py-32 px-6 relative overflow-hidden">
+    <section className="relative z-10 py-24 md:py-32 px-6 overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0 -z-10"
@@ -42,49 +31,42 @@ export function CTASection() {
           />
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-foreground mb-6 text-balance">
-          Stay in orbit
+        <h2
+          className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight mb-6 bg-clip-text text-transparent text-balance"
+          style={{
+            backgroundImage:
+              "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
+          }}
+        >
+          Join the wave of people reclaiming their time, presence, and attention!
         </h2>
         
         <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10 text-pretty">
-          Be the first to know about our launch, updates, and opportunities 
+          Be the first to know about our launch, updates, and opportunities
           to join the Soberphone community.
         </p>
 
-        {/* Email Form */}
-        {!isSubmitted ? (
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-6 py-4 rounded-full bg-card border border-border/50 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
-              />
-              <Button 
-                type="submit"
-                size="lg"
-                className="rounded-full px-8 py-6 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg whitespace-nowrap"
-              >
-                Join Waitlist
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              No spam, ever. Unsubscribe anytime.
-            </p>
-          </form>
-        ) : (
-          <div className="max-w-md mx-auto p-8 rounded-3xl bg-card border border-primary/30">
-            <p className="text-lg text-foreground font-medium mb-2">
-              Thanks for joining!
-            </p>
-            <p className="text-muted-foreground">
-              We&apos;ll be in touch soon with updates on Soberphone.
-            </p>
-          </div>
-        )}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
+          >
+            <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+              Join the Waitlist
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
+          >
+            <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
+              Download the Beta
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   )

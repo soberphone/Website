@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { BETA_URL } from "@/lib/links"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -17,6 +18,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (window.location.pathname === "/") {
+      e.preventDefault()
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,18 +36,27 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
             <span className="font-serif text-xl md:text-2xl font-medium tracking-tight text-foreground">
               Soberphone
             </span>
           </Link>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Contact + CTA */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link
+              href="/contact"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
+            </Link>
             <Button
+              asChild
               className="rounded-full px-6 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
             >
-              Get Early Access
+              <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
+                Download the Beta
+              </a>
             </Button>
           </div>
 
@@ -57,11 +74,13 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg border-b border-border/50 shadow-lg">
             <div className="flex flex-col p-6 gap-4">
-              <Button
-                className="rounded-full mt-2 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
+              <Link
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-base text-foreground hover:text-primary transition-colors"
               >
-                Get Early Access
-              </Button>
+                Contact
+              </Link>
             </div>
           </div>
         )}

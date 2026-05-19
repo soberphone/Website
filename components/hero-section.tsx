@@ -1,8 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
 const orbStates = [
   { src: "/images/orbs/struggling.png", label: "Struggling" },
@@ -14,7 +14,7 @@ const orbStates = [
 
 export function HeroSection() {
   return (
-    <section className="relative isolate flex flex-col items-center px-6 pt-24 md:pt-32 pb-0 overflow-hidden">
+    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-24 md:pt-32 pb-0 overflow-hidden">
       {/* Background gradient — mirrors the app's AppGradientBackground (white center → #D0DFFF edge) */}
       <div
         className="absolute inset-0 -z-10"
@@ -36,7 +36,7 @@ export function HeroSection() {
 
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <h1
-            className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
+            className="font-serif text-4xl sm:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
             style={{
               backgroundImage:
                 "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
@@ -55,18 +55,23 @@ export function HeroSection() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Button
+              asChild
               size="lg"
-              className="rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
+              className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
             >
-              Join the Waitlist
+              <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
+                Download the Beta
+              </a>
             </Button>
             <Button
               asChild
-              variant="ghost"
+              variant="outline"
               size="lg"
-              className="rounded-full px-8 py-6 text-base text-muted-foreground hover:text-foreground hover:bg-muted/50"
+              className="min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
             >
-              <Link href="/features">Learn More</Link>
+              <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+                Join the Waitlist
+              </a>
             </Button>
           </div>
         </div>
