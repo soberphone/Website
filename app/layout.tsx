@@ -17,13 +17,19 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Soberphone | Freedom from the grip of our screens. Together.',
-  description: 'Soberphone is a social platform that leverages powerful tools and support systems to free people from screen addiction. Healing happens in connection, not isolation.',
+  metadataBase: new URL('https://soberphone.io'),
+  title: 'Soberphone | Find freedom from your screen.',
+  description: 'Get to the root with a social solution that motivates real change. Willpower, blockers, and hyper-gamification not working? Soberphone helps you set goals and invite supporters who check in when you go over.',
   keywords: ['screen time', 'digital wellness', 'phone addiction', 'screen addiction', 'social support', 'digital detox', 'mindfulness'],
   openGraph: {
-    title: 'Soberphone | Freedom from the grip of our screens. Together.',
-    description: 'A social platform that frees you through the power of social transparency and connection.',
+    title: 'Soberphone | Find freedom from your screen.',
+    description: 'Get to the root with a social solution that motivates real change.',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Soberphone | Find freedom from your screen.',
+    description: 'Get to the root with a social solution that motivates real change.',
   },
 }
 
