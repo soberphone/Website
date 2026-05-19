@@ -14,7 +14,7 @@ const orbStates = [
 
 export function HeroSection() {
   return (
-    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-24 md:pt-32 pb-0 overflow-hidden">
+    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[114px] md:pt-32 pb-0 overflow-hidden">
       {/* Background gradient — mirrors the app's AppGradientBackground (white center → #D0DFFF edge) */}
       <div
         className="absolute inset-0 -z-10"
@@ -45,19 +45,19 @@ export function HeroSection() {
             Find freedom from your screen.
           </h1>
 
-          <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
-            Willpower, blockers, and hyper-gamification not working?
+          <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[30px] sm:mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
+            Willpower, blockers, and <br className="sm:hidden" />hyper-gamification not working?
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
-            Get to the root with a social solution that motivates real change.
+            Get to the root with a social solution <br className="sm:hidden" />that motivates real change.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Button
               asChild
               size="lg"
-              className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
+              className="min-w-[17rem] sm:min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
             >
               <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
                 Download the Beta
@@ -67,7 +67,7 @@ export function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
+              className="min-w-[17rem] sm:min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
             >
               <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
                 Join the Waitlist

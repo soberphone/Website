@@ -58,7 +58,7 @@ function useViewportTier(): Tier {
 
 export function FeaturesSection() {
   const tier = useViewportTier()
-  const phoneWidth = { sm: 130, md: 150, lg: 200, xl: 240 }[tier]
+  const phoneWidth = { sm: 240, md: 150, lg: 200, xl: 240 }[tier]
 
   return (
     <section
@@ -99,8 +99,8 @@ export function FeaturesSection() {
 
           <figure className="mt-8 md:mt-10 mx-auto max-w-xl text-center">
             <blockquote className="font-serif italic text-base md:text-lg text-foreground/80 leading-relaxed text-pretty">
-              &ldquo;Not only is this hands down the most effective tool I&rsquo;ve
-              found, it&rsquo;s also really easy, intuitive, fun, and connective.&rdquo;
+              &ldquo;Hands down the most effective tool I&rsquo;ve found&hellip;
+              changed my life. Also happens to be intuitive, fun, and connective.&rdquo;
             </blockquote>
             <figcaption className="mt-2 text-sm text-muted-foreground not-italic">
               &mdash; Mark, Soberphone Beta User
@@ -109,7 +109,7 @@ export function FeaturesSection() {
         </div>
 
         {/* 4-column phone grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-[17px] gap-y-12 md:gap-x-[29px] md:gap-y-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-[17px] gap-y-12 md:gap-x-[29px] md:gap-y-16 items-start">
           {features.map((feature, i) => (
             <div
               key={i}
