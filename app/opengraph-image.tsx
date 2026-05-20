@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 export const runtime = 'nodejs'
-export const alt = 'Soberphone — find freedom from your screen.'
+export const alt = 'Soberphone'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -29,18 +29,6 @@ export default function OpengraphImage() {
         }}
       >
         <img src={logoSrc} width={260} height={364} alt="Soberphone" />
-        <div
-          style={{
-            marginTop: 28,
-            fontSize: 44,
-            fontWeight: 500,
-            fontFamily: 'serif',
-            color: '#1a1a1a',
-            letterSpacing: '-0.02em',
-          }}
-        >
-          Find freedom from your screen.
-        </div>
       </div>
     ),
     { ...size },
