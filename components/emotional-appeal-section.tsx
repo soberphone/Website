@@ -21,7 +21,7 @@ export function EmotionalAppealSection() {
 
       {/* Part 1: The Love & The Hook - Full background image */}
       <div
-        className="relative px-6 pt-16 pb-24 md:pt-24 md:pb-32 min-h-[85vh]"
+        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[90vh] flex flex-col justify-end"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "100% auto",
@@ -30,32 +30,23 @@ export function EmotionalAppealSection() {
           backgroundColor: "#FAF5F0",
         }}
       >
-        {/* Content container - split layout */}
-        <div className="relative z-10 max-w-6xl mx-auto h-full">
-          {/* Top left: The Love */}
-          <div className="max-w-md">
-            <p className="text-xs md:text-sm font-sans uppercase tracking-[0.3em] text-foreground/40 mb-4">
-              Let&apos;s be honest
-            </p>
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.15] tracking-tight text-foreground">
-              There&apos;s a lot to love about our screens
-            </h2>
-            <p className="mt-4 text-base md:text-lg text-foreground/60 leading-relaxed">
-              The utility. The connection.<br />
-              The whole world in our hands.
-            </p>
-          </div>
-
-          {/* Bottom right: The Hook */}
-          <div className="mt-32 md:mt-48 lg:mt-56 ml-auto max-w-md text-right">
-            <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.15] tracking-tight text-foreground">
-              But we&apos;re also totally hooked
-            </h3>
-            <p className="mt-4 text-base md:text-lg text-foreground/60 leading-relaxed">
-              Hours, weeks, and years of our lives<br />
-              spent unintentionally absorbed.
-            </p>
-          </div>
+        {/* Text container - bottom centered */}
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+          {/* The Love */}
+          <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
+            There&apos;s a lot to love about our screens &mdash;
+          </p>
+          <p className="text-base md:text-lg text-foreground/50 leading-relaxed mb-10 md:mb-14">
+            the utility, the connection, the whole world in our hands.
+          </p>
+          
+          {/* The Hook - larger, bolder */}
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
+            But we&apos;re also<br />totally hooked.
+          </h2>
+          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
+            Hours, weeks, and years of our lives spent unintentionally absorbed.
+          </p>
         </div>
       </div>
 
