@@ -4,53 +4,50 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
-const orbStates = [
-  { src: "/images/orbs/struggling.png", label: "Struggling" },
-  { src: "/images/orbs/difficult.png", label: "Difficult" },
-  { src: "/images/orbs/okay.png", label: "Okay" },
-  { src: "/images/orbs/great.png", label: "Great" },
-  { src: "/images/orbs/vibrant.png", label: "Vibrant" },
-]
-
 export function HeroSection() {
   return (
-    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[114px] md:pt-32 pb-0 overflow-hidden">
-      {/* Background gradient — mirrors the app's AppGradientBackground (white center → #D0DFFF edge) */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 50%, #ffffff 0%, #ffffff 40%, #D0DFFF 100%)",
-        }}
-      />
-
-<div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
-        <Image
-          src="/images/soberphone-logo-mark.png"
-          alt="Soberphone"
-          priority
-          width={180}
-          height={260}
-          className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto mb-3"
-        />
+    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-0 overflow-hidden min-h-[calc(100svh-44px)] bg-white">
+      <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
+        <style>{`
+          @keyframes sp-orb-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+          @keyframes sp-orb-bob { 0% { transform: translateY(0); } 100% { transform: translateY(-12px); } }
+          @media (prefers-reduced-motion: reduce) {
+            .sp-orb-bob, .sp-orb-spin { animation: none !important; }
+          }
+        `}</style>
+        <div
+          className="sp-orb-bob mb-[22px]"
+          style={{ animation: "sp-orb-bob 4s ease-in-out infinite alternate" }}
+        >
+          <Image
+            src="/images/orbs/vibrant.png"
+            alt="Soberphone"
+            priority
+            width={512}
+            height={512}
+            draggable={false}
+            className="sp-orb-spin w-32 sm:w-36 md:w-40 lg:w-44 xl:w-48 h-auto select-none"
+            style={{ animation: "sp-orb-spin 20s linear infinite" }}
+          />
+        </div>
 
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <h1
-            className="font-serif text-4xl sm:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
+            className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
             style={{
               backgroundImage:
                 "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
             }}
           >
-            Find freedom from your screen.
+            Soberphone
           </h1>
 
           <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[30px] sm:mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
-            Willpower, blockers, and <br className="sm:hidden" />hyper-gamification not working?
+            Stay Connected. Not Consumed.
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
-            Get to the root with a social solution <br className="sm:hidden" />that motivates real change.
+            Find screen-life balance with a social solution that works.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -77,25 +74,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Orb spectrum row — tops poke above the fold, struggling → vibrant L→R.
-          Negative -mx-6 breaks out of the section's px-6 so orbs can run nearly edge-to-edge. */}
-      <div className="w-[calc(100%+3rem)] -mx-6 mt-[135px] grid grid-cols-5 gap-x-1 sm:gap-x-2 md:gap-x-3 items-end">
-        {orbStates.map((orb) => (
-          <div key={orb.src} className="flex flex-col items-center w-full">
-            {/* aspect-[2/1] + overflow-hidden hides the bottom half of the square orb */}
-            <div className="w-full max-w-[260px] aspect-[2/1] overflow-hidden">
-              <Image
-                src={orb.src}
-                alt={orb.label}
-                width={512}
-                height={512}
-                className="w-full h-auto select-none"
-                draggable={false}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
     </section>
   )
 }

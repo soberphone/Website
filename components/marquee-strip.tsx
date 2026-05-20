@@ -13,7 +13,7 @@ export function MarqueeStrip() {
   return (
     <section
       aria-label="The struggle"
-      className="relative w-full bg-[#6FA3F7] py-10 md:py-14"
+      className="relative w-full bg-[#2e2e2e] py-8 md:py-10"
     >
       {/* Keyframes inlined here so this component is self-contained and not
           dependent on globals.css ordering or HMR re-processing. */}
@@ -37,7 +37,7 @@ export function MarqueeStrip() {
         <div
           className="flex w-max whitespace-nowrap"
           style={{
-            animation: "sp-marquee 40s linear infinite",
+            animation: "sp-marquee 60s linear infinite",
             willChange: "transform",
           }}
         >
