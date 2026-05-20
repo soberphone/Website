@@ -30,13 +30,7 @@ export function EmotionalAppealSection() {
           backgroundColor: "#FAF5F0",
         }}
       >
-        {/* Gradient overlay for text readability */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(to bottom, rgba(250,245,240,0) 0%, rgba(250,245,240,0.2) 50%, rgba(250,245,240,0.85) 85%, rgba(250,245,240,1) 100%)"
-          }}
-        />
+
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-foreground/50 mb-5">
