@@ -19,9 +19,9 @@ export function EmotionalAppealSection() {
         <div className="h-1.5 w-12 rounded-full bg-foreground/20" />
       </div>
 
-      {/* Part 1: The Love - Full background image at natural size */}
+      {/* Part 1: The Love & The Hook - Full background image */}
       <div
-        className="relative px-6 pt-20 pb-64 md:pt-28 md:pb-80 lg:pb-96"
+        className="relative px-6 pt-16 pb-24 md:pt-24 md:pb-32 min-h-[85vh]"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "100% auto",
@@ -30,30 +30,32 @@ export function EmotionalAppealSection() {
           backgroundColor: "#FAF5F0",
         }}
       >
+        {/* Content container - split layout */}
+        <div className="relative z-10 max-w-6xl mx-auto h-full">
+          {/* Top left: The Love */}
+          <div className="max-w-md">
+            <p className="text-xs md:text-sm font-sans uppercase tracking-[0.3em] text-foreground/40 mb-4">
+              Let&apos;s be honest
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.15] tracking-tight text-foreground">
+              There&apos;s a lot to love about our screens
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-foreground/60 leading-relaxed">
+              The utility. The connection.<br />
+              The whole world in our hands.
+            </p>
+          </div>
 
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-foreground/50 mb-5">
-            Let&apos;s be honest
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground text-balance mb-8">
-            There&apos;s a lot to love about our screens
-          </h2>
-          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed text-balance max-w-xl mx-auto">
-            The utility. The connection. The whole world in our hands.
-          </p>
-        </div>
-      </div>
-
-      {/* Part 2: The Problem */}
-      <div className="px-6 py-16 md:py-24 bg-gradient-to-b from-[#FAF5F0] via-[#F5EDE5] to-[#EAE0D5]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-tight text-foreground mb-6 text-balance">
-            But we&apos;re also totally hooked
-          </h3>
-          <p className="text-lg md:text-xl text-foreground/60 leading-relaxed text-balance max-w-lg mx-auto">
-            Hours, weeks, and years of our lives spent unintentionally absorbed.
-          </p>
+          {/* Bottom right: The Hook */}
+          <div className="mt-32 md:mt-48 lg:mt-56 ml-auto max-w-md text-right">
+            <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.15] tracking-tight text-foreground">
+              But we&apos;re also totally hooked
+            </h3>
+            <p className="mt-4 text-base md:text-lg text-foreground/60 leading-relaxed">
+              Hours, weeks, and years of our lives<br />
+              spent unintentionally absorbed.
+            </p>
+          </div>
         </div>
       </div>
 
