@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { HeroSection } from "@/components/hero-section"
 import { MarqueeStrip } from "@/components/marquee-strip"
 import { PhilosophySection } from "@/components/philosophy-section"
+import { EmotionalAppealSection } from "@/components/emotional-appeal-section"
 import { FeaturesSection } from "@/components/features-section"
 
 export function ScrollStage() {
@@ -56,6 +57,7 @@ export function ScrollStage() {
         <MarqueeStrip />
         <PhilosophySection />
       </div>
+      <EmotionalAppealSection />
       <FeaturesSection />
     </>
   )

@@ -8,7 +8,7 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
-      className="relative z-10 px-6 overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)] pt-24 md:pt-32 pb-44 md:pb-56"
+      className="relative z-10 px-6 overflow-hidden pt-24 md:pt-32 pb-44 md:pb-56"
       style={{
         transform: "translateZ(0)",
         willChange: "transform",
@@ -16,19 +16,12 @@ export function FeaturesSection() {
       }}
     >
       <div
-        className="absolute inset-0 -z-10 rounded-t-[2.5rem] md:rounded-t-[3.5rem]"
+        className="absolute inset-0 -z-10"
         style={{
           background:
             "linear-gradient(0deg, #ffffff 0%, #ffffff 30%, #C3DCF6 100%)",
         }}
       />
-
-      <div
-        aria-hidden
-        className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2"
-      >
-        <div className="h-1.5 w-12 rounded-full bg-foreground/20" />
-      </div>
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="flex justify-center mb-8">
