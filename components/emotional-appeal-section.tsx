@@ -21,7 +21,7 @@ export function EmotionalAppealSection() {
 
       {/* Part 1: The Love - Full background image at natural size */}
       <div
-        className="relative px-6 pt-20 pb-24 md:pt-28 md:pb-32"
+        className="relative px-6 pt-20 pb-64 md:pt-28 md:pb-80 lg:pb-96"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "100% auto",
