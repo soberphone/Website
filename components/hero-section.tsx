@@ -6,7 +6,7 @@ import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
 export function HeroSection() {
   return (
-    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-0 overflow-hidden min-h-[calc(100svh-44px)]">
+    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-20 md:pb-28 overflow-hidden min-h-[calc(100svh-44px)]">
       <Image
         src="/images/hero-bg.png"
         alt=""
