@@ -19,7 +19,7 @@ export function FeaturesSection() {
         className="absolute inset-0 -z-10 rounded-t-[2.5rem] md:rounded-t-[3.5rem]"
         style={{
           background:
-            "linear-gradient(180deg, #FBEEE7 0%, #FBEEE7 30%, oklch(0.95 0.03 270) 70%, oklch(0.92 0.05 270) 100%)",
+            "linear-gradient(0deg, #FBEEE7 0%, #FBEEE7 30%, oklch(0.95 0.03 270) 70%, oklch(0.92 0.05 270) 100%)",
         }}
       />
 

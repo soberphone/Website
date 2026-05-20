@@ -6,7 +6,7 @@ import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
 export function HeroSection() {
   return (
-    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-0 overflow-hidden min-h-[calc(100svh-44px)] bg-white">
+    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-0 overflow-hidden min-h-[calc(100svh-44px)] bg-[#F9FBFF]">
       <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
         <style>{`
           @keyframes sp-orb-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
