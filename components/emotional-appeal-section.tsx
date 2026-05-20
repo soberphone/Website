@@ -34,7 +34,7 @@ export function EmotionalAppealSection() {
         <div 
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, rgba(250,245,240,0.3) 0%, rgba(250,245,240,0.5) 40%, rgba(250,245,240,0.95) 85%, rgba(250,245,240,1) 100%)"
+            background: "linear-gradient(to bottom, rgba(250,245,240,0) 0%, rgba(250,245,240,0.2) 50%, rgba(250,245,240,0.85) 85%, rgba(250,245,240,1) 100%)"
           }}
         />
 
