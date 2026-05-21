@@ -53,7 +53,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e] overflow-hidden">
+      <div className="relative z-10 bg-[#2e2e2e] overflow-hidden">
         {/* Vignette overlay */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -61,7 +61,7 @@ export function EmotionalAppealSection() {
             background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
           }}
         />
-        <div className="relative max-w-3xl mx-auto text-center">
+        <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
             Most of us want<br />something different for our lives.
           </p>
@@ -71,6 +71,19 @@ export function EmotionalAppealSection() {
           <p className="mt-2 text-base md:text-lg text-white/50">
             For loved ones, and projects, and rest.
           </p>
+        </div>
+        {/* Curved divider */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
+          <svg 
+            className="relative block w-full h-[60px] md:h-[80px]" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+          >
+            <path 
+              d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" 
+              fill="#6FA3F7"
+            />
+          </svg>
         </div>
       </div>
 
