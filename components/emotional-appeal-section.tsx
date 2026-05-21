@@ -1,5 +1,7 @@
 "use client"
 
+import { PhoneMockup } from "@/components/phone-mockup"
+
 export function EmotionalAppealSection() {
   return (
     <section
@@ -52,30 +54,46 @@ export function EmotionalAppealSection() {
 
       {/* Part 3: The Solution */}
       <div className="px-6 py-20 md:py-28 bg-[#6FA3F7]">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-white/40 mb-5">
-            A new approach
-          </p>
-          <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-tight text-white mb-6 text-balance">
-            Define your version of balance and bring it to life
-          </h3>
-          <p className="text-xl md:text-2xl text-[#F4A988] font-serif mb-12">
-            with Soberphone.
-          </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Two-column layout: Text left, Phone right */}
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Text content */}
+            <div className="flex-1 text-center lg:text-left">
+              <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-white/50 mb-5">
+                A new approach
+              </p>
+              <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-tight text-white mb-6 text-balance">
+                Define your version of balance and bring it to life
+              </h3>
+              <p className="text-xl md:text-2xl text-[#F4A988] font-serif mb-10">
+                with Soberphone.
+              </p>
 
-          {/* Value Props */}
-          <div className="flex flex-col gap-4 max-w-md mx-auto text-left">
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 rounded-full bg-[#F4A988] mt-2.5 shrink-0" />
-              <span className="text-base md:text-lg text-white/80">
-                No dumb phones or cold-turkey
-              </span>
+              {/* Value Props */}
+              <div className="flex flex-col gap-4 max-w-md mx-auto lg:mx-0 text-left">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-[#F4A988] mt-2.5 shrink-0" />
+                  <span className="text-base md:text-lg text-white/90">
+                    No dumb phones or cold-turkey
+                  </span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-white/60 mt-2.5 shrink-0" />
+                  <span className="text-base md:text-lg text-white/90">
+                    Keep what you love, and get support with the rest
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 rounded-full bg-[#8FB4FF] mt-2.5 shrink-0" />
-              <span className="text-base md:text-lg text-white/80">
-                Keep what you love, and get support with the rest
-              </span>
+
+            {/* Phone mockup */}
+            <div className="flex-shrink-0">
+              <PhoneMockup
+                src="/images/app-screenshot.png"
+                alt="Soberphone app showing personalized greeting"
+                width={280}
+                className="drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
