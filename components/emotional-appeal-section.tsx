@@ -86,19 +86,12 @@ export function EmotionalAppealSection() {
               </div>
             </div>
 
-            {/* Phone mockup - 3D perspective */}
-            <div 
-              className="flex-shrink-0 relative lg:mr-[-40px]"
-              style={{
-                perspective: "1000px",
-              }}
-            >
+            {/* Phone mockup - angled and dynamic */}
+            <div className="flex-shrink-0 relative lg:mr-[-60px]">
               <div 
-                className="transform"
+                className="transform rotate-[12deg] translate-x-4 lg:translate-x-8"
                 style={{
-                  transform: "rotateY(-15deg) rotateX(5deg) rotateZ(5deg)",
-                  transformStyle: "preserve-3d",
-                  filter: "drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3))"
+                  filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
                 }}
               >
                 <PhoneMockup
