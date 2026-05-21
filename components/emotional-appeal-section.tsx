@@ -86,10 +86,9 @@ export function EmotionalAppealSection() {
               </div>
             </div>
 
-            {/* Phone mockup - angled and dynamic */}
+            {/* Phone mockup */}
             <div className="flex-shrink-0 relative lg:mr-[-60px]">
               <div 
-                className="transform rotate-[12deg]"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
                 }}
