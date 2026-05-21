@@ -52,29 +52,22 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Floating black circle with Desire text - straddles Part 1 and Part 3 */}
-      <div className="relative z-30 flex justify-start px-8 md:px-16 lg:px-24 -mt-40 md:-mt-52 mb-[-160px] md:mb-[-200px]">
+      {/* Floating blue circle with Desire text - straddles Part 1 and Part 3 */}
+      <div className="relative z-30 flex justify-center px-8 md:px-16 lg:px-24 -mt-56 md:-mt-72 mb-[-220px] md:mb-[-280px]">
         <div 
-          className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full bg-[#2e2e2e] flex items-center justify-center p-8 md:p-12"
+          className="relative w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full bg-[#6FA3F7] flex items-center justify-center p-10 md:p-16 ml-12 md:ml-24"
           style={{
-            boxShadow: "0 25px 60px rgba(0,0,0,0.3)"
+            boxShadow: "0 30px 80px rgba(0,0,0,0.25)"
           }}
         >
-          {/* Vignette inside circle */}
-          <div 
-            className="absolute inset-0 rounded-full pointer-events-none"
-            style={{
-              background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
-            }}
-          />
           <div className="relative text-center">
-            <p className="font-serif text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-semibold">
+            <p className="font-serif text-xl md:text-2xl lg:text-3xl text-white leading-relaxed font-semibold">
               Most of us want<br />something different<br />for our lives.
             </p>
-            <p className="mt-4 text-base md:text-lg text-white/70 leading-tight">
-              More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>,<br />and <span className="text-[#B5D4FF] font-medium">attention</span>.
+            <p className="mt-5 text-lg md:text-xl text-white/80 leading-tight">
+              More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>,<br />and <span className="text-white font-medium">attention</span>.
             </p>
-            <p className="mt-2 text-sm md:text-base text-white/50">
+            <p className="mt-3 text-base md:text-lg text-white/60">
               For loved ones, projects, and rest.
             </p>
           </div>
