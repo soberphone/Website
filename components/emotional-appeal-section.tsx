@@ -59,27 +59,27 @@ export function EmotionalAppealSection() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text content */}
             <div className="flex-1 text-center lg:text-left">
-              <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-white/50 mb-5">
+              <p className="text-base md:text-lg font-sans uppercase tracking-[0.25em] text-white/50 mb-6">
                 A new approach
               </p>
-              <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-tight text-white mb-6 text-balance">
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.15] tracking-tight text-white mb-7 text-balance">
                 Define your version of balance and bring it to life
               </h3>
-              <p className="text-xl md:text-2xl text-[#F4A988] font-serif mb-10">
+              <p className="text-2xl md:text-3xl text-[#FFD4B8] font-serif mb-12">
                 with Soberphone.
               </p>
 
               {/* Value Props */}
-              <div className="flex flex-col gap-4 max-w-md mx-auto lg:mx-0 text-left">
+              <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0 text-left">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[#F4A988] mt-2.5 shrink-0" />
-                  <span className="text-base md:text-lg text-white/90">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FFD4B8] mt-3 shrink-0" />
+                  <span className="text-lg md:text-xl text-white/90">
                     No dumb phones or cold-turkey
                   </span>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-white/60 mt-2.5 shrink-0" />
-                  <span className="text-base md:text-lg text-white/90">
+                  <div className="w-2.5 h-2.5 rounded-full bg-white/60 mt-3 shrink-0" />
+                  <span className="text-lg md:text-xl text-white/90">
                     Keep what you love, and get support with the rest
                   </span>
                 </div>
@@ -88,16 +88,16 @@ export function EmotionalAppealSection() {
 
             {/* Phone mockup */}
             <div className="flex-shrink-0 relative lg:mr-[-60px]">
-              {/* Radial glow behind phone */}
-              <div 
-                className="absolute inset-0 lg:-translate-x-10"
+              {/* Soft round glow behind phone, blending into the blue */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[2000px] rounded-full blur-3xl"
                 style={{
-                  background: "radial-gradient(ellipse 120% 100% at center, rgba(255,255,255,0.25) 0%, rgba(111,163,247,0) 60%)",
-                  filter: "blur(40px)",
-                  transform: "scale(1.5)",
+                  background:
+                    "radial-gradient(circle at center, rgba(195,220,246,0.85) 0%, rgba(195,220,246,0.5) 30%, rgba(195,220,246,0.2) 55%, rgba(195,220,246,0) 75%)",
                 }}
               />
-              <div 
+              <div
                 className="relative lg:-translate-x-10"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
