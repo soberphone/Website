@@ -45,7 +45,7 @@ export function HeroSection() {
             className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
             style={{
               backgroundImage:
-                "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
+                "linear-gradient(270deg, #6FA3F7 0%, #5B89E8 30%, #F4A988 70%, #FFD68A 100%)",
             }}
           >
             Soberphone
