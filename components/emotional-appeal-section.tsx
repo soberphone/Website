@@ -13,9 +13,9 @@ export function EmotionalAppealSection() {
         backfaceVisibility: "hidden",
       }}
     >
-      {/* Part 1: The Love & The Hook - Full background image. Rounded sheet + clip lives here (not on the section) so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
+      {/* Part 1: The Love & The Hook - Full background image. Rounded sheet lives here (not on the section) so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. No overflow-hidden so the "for your life?" bottom statement can bleed onto Part 3's blue. */}
       <div
-        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end rounded-t-[2.5rem] md:rounded-t-[3.5rem] overflow-hidden shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
+        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
