@@ -59,7 +59,7 @@ export function EmotionalAppealSection() {
             Most of us want<br />something different for our lives.
           </p>
           <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
-            More <span className="text-white font-medium">time</span>, <span className="text-white font-medium">presence</span>, and <span className="text-white font-medium">attention</span>.
+            More <span className="text-[#F4A988] font-medium">time</span>, <span className="text-[#D4B8E8] font-medium">presence</span>, and <span className="text-[#A8D4E6] font-medium">attention</span>.
           </p>
           <p className="mt-2 text-base md:text-lg text-white/50">
             For loved ones, and projects, and rest.
