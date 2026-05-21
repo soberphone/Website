@@ -43,7 +43,7 @@ export function FeaturesSection() {
         />
 
       {/* The Philosophy */}
-      <div className="relative max-w-2xl mx-auto mb-20 md:mb-28 text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12">
+      <div id="philosophy" className="relative max-w-2xl mx-auto text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12 scroll-mt-56">
         <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
           The Philosophy
         </p>
@@ -59,7 +59,7 @@ export function FeaturesSection() {
             Lasting change comes from being seen, supported, and accountable to people who care about us. When we take our struggles out of isolation and embed them in community and connection, our lives begin to change at the root.
           </p>
           <p>
-            <strong className="font-semibold text-[#6FA3F7]">Soberphone</strong> works where other tools don&rsquo;t because it motivates change at a deeper level.
+            <strong className="font-semibold text-[#6FA3F7] text-3xl md:text-4xl mr-2 align-baseline">Soberphone</strong> works where other tools don&rsquo;t because it motivates change at a deeper level.
           </p>
           <p className="font-serif text-xl md:text-2xl text-foreground leading-snug">
             Beyond{" "}
@@ -80,7 +80,16 @@ export function FeaturesSection() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center">
+      {/* Alternating stripes transition — lavender (matching the bg at the top of the section) thinning into white, echoing the blue/black stripes on the page above */}
+      <div aria-hidden className="relative -mx-6 mt-36 md:mt-[12.25rem] bg-white">
+        <div className="h-8 md:h-10 bg-[#E2E8FA]" />
+        <div className="h-6 md:h-8" />
+        <div className="h-4 md:h-5 bg-[#E2E8FA]" />
+        <div className="h-10 md:h-12" />
+        <div className="h-1.5 md:h-2 bg-[#E2E8FA]" />
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center mt-20 md:mt-28">
         <div className="flex justify-center mb-8">
           <Image
             src="/images/soberphone-logo-mark.png"
@@ -98,7 +107,7 @@ export function FeaturesSection() {
               "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
           }}
         >
-          Join the wave of people reclaiming their time, presence, and attention!
+          Find your screen-life balance with Soberphone.
         </h2>
 
         <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10 text-pretty">
@@ -109,21 +118,21 @@ export function FeaturesSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             asChild
+            size="lg"
+            className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
+          >
+            <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
+              Download the Beta
+            </a>
+          </Button>
+          <Button
+            asChild
             variant="outline"
             size="lg"
             className="min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
           >
             <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
               Join the Waitlist
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
-          >
-            <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-              Download the Beta
             </a>
           </Button>
         </div>

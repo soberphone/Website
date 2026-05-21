@@ -63,7 +63,7 @@ export function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="relative z-10 overflow-hidden pb-24 md:pb-32"
+      className="relative z-10 overflow-hidden pb-24 md:pb-32 scroll-mt-24"
       style={{
         transform: "translateZ(0)",
         willChange: "transform",

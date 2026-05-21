@@ -3,7 +3,7 @@
 export function PhilosophySection() {
   return (
     <section
-      id="philosophy"
+      id="testimonial"
       className="relative z-20 pt-40 md:pt-48 pb-48 md:pb-56 px-6 overflow-hidden shadow-[0_-20px_50px_rgba(0,0,0,0.5)]"
     >
       {/* Background */}
