@@ -53,8 +53,15 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e]">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e] overflow-hidden">
+        {/* Vignette overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
             Most of us want<br />something different for our lives.
           </p>
