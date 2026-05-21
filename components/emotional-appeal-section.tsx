@@ -55,10 +55,10 @@ export function EmotionalAppealSection() {
       {/* Part 2: The Desire - Color bar */}
       <div className="px-6 py-16 md:py-20 bg-[#2e2e2e]">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed whitespace-nowrap">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed whitespace-nowrap font-semibold">
             Most of us want something different for our lives.
           </p>
-          <p className="mt-6 text-2xl md:text-3xl lg:text-4xl text-white/70 leading-tight">
+          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
             More <span className="text-white font-medium">time</span>, <span className="text-white font-medium">presence</span>, and <span className="text-white font-medium">attention</span>.
           </p>
           <p className="mt-2 text-base md:text-lg text-white/50">
