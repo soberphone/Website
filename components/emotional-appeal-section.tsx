@@ -74,22 +74,8 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Part 3: The Solution - Large circle emerging from black */}
-      <div className="relative z-10 pt-8 md:pt-12 bg-[#2e2e2e]">
-        {/* Vignette overlay to match Desire section */}
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
-          }}
-        />
-        {/* Giant blue circle - only top arc visible */}
-        <div 
-          className="relative mx-auto bg-[#6FA3F7] px-6 pt-20 md:pt-28 pb-20 md:pb-28"
-          style={{
-            borderRadius: "50% 50% 0 0 / 100px 100px 0 0",
-          }}
-        >
+      {/* Part 3: The Solution */}
+      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -148,7 +134,6 @@ export function EmotionalAppealSection() {
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
