@@ -52,15 +52,15 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-20 bg-[#2e2e2e]">
-        {/* Vignette overlay */}
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
-          }}
-        />
+      {/* Part 2: The Desire - iOS Glass effect */}
+      <div 
+        className="relative z-20 backdrop-blur-xl"
+        style={{
+          backgroundColor: "rgba(40, 40, 40, 0.7)",
+        }}
+      >
+        {/* Subtle border/shine at top */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
             Most of us want<br />something different for our lives.
