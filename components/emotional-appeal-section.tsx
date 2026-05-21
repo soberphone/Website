@@ -88,8 +88,17 @@ export function EmotionalAppealSection() {
 
             {/* Phone mockup */}
             <div className="flex-shrink-0 relative lg:mr-[-60px]">
+              {/* Radial glow behind phone */}
               <div 
-                className="lg:-translate-x-10"
+                className="absolute inset-0 lg:-translate-x-10"
+                style={{
+                  background: "radial-gradient(ellipse 120% 100% at center, rgba(255,255,255,0.25) 0%, rgba(111,163,247,0) 60%)",
+                  filter: "blur(40px)",
+                  transform: "scale(1.5)",
+                }}
+              />
+              <div 
+                className="relative lg:-translate-x-10"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
                 }}
