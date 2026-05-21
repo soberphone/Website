@@ -46,13 +46,23 @@ export function EmotionalAppealSection() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
             But we&apos;re also<br />totally hooked.
           </h2>
-          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto mb-12 md:mb-16">
+          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
             Hours, weeks, and years of our lives spent unintentionally absorbed.
           </p>
+        </div>
+      </div>
 
-          {/* The Desire */}
-          <p className="font-serif text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-lg mx-auto text-balance">
-            Most of us want something different for our lives. More time, presence, and attention. For loved ones, and projects, and rest.
+      {/* Part 2: The Desire - Color bar */}
+      <div className="px-6 py-16 md:py-20 bg-[#F5EDE5]">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed">
+            Most of us want something different for our lives.
+          </p>
+          <p className="mt-6 text-lg md:text-xl text-foreground/70 leading-relaxed">
+            More <span className="text-foreground font-medium">time</span>, <span className="text-foreground font-medium">presence</span>, and <span className="text-foreground font-medium">attention</span>.
+          </p>
+          <p className="mt-2 text-base md:text-lg text-foreground/50">
+            For loved ones, and projects, and rest.
           </p>
         </div>
       </div>
