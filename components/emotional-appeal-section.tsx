@@ -72,16 +72,16 @@ export function EmotionalAppealSection() {
             For loved ones, and projects, and rest.
           </p>
         </div>
-        {/* Curved divider */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
+        {/* Curved divider - black extending down into blue */}
+        <div className="absolute bottom-[-60px] md:bottom-[-80px] left-0 right-0 overflow-hidden leading-[0] z-10">
           <svg 
             className="relative block w-full h-[60px] md:h-[80px]" 
             viewBox="0 0 1200 120" 
             preserveAspectRatio="none"
           >
             <path 
-              d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" 
-              fill="#6FA3F7"
+              d="M0,120 C300,20 900,20 1200,120 L1200,0 L0,0 Z" 
+              fill="#2e2e2e"
             />
           </svg>
         </div>
