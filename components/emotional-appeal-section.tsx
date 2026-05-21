@@ -87,7 +87,7 @@ export function EmotionalAppealSection() {
             </div>
 
             {/* Phone mockup */}
-            <div className="flex-shrink-0 relative lg:mr-[-60px]">
+            <div className="flex-shrink-0 relative lg:mr-[-60px] lg:ml-[-60px]">
               <div 
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
