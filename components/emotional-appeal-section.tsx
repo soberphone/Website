@@ -53,7 +53,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - Color bar */}
-      <div className="px-6 py-16 md:py-20 bg-[#2e2e2e]">
+      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
             Most of us want<br />something different for our lives.
