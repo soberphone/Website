@@ -53,31 +53,45 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - iOS Glass effect */}
-      <div 
-        className="relative z-20 backdrop-blur-xl overflow-hidden"
-        style={{
-          backgroundColor: "rgba(40, 40, 40, 0.7)",
-        }}
-      >
-        {/* Background image for glass blur effect */}
+      <div className="relative z-20 overflow-hidden">
+        {/* Background image layer - this gets blurred */}
         <div 
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0"
           style={{
             backgroundImage: "url('/images/emotional-bg.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            filter: "blur(50px) saturate(1.8)",
+            transform: "scale(1.1)",
           }}
         />
-        {/* Subtle border/shine at top */}
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        {/* Glass tint overlay */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.15)",
+            backdropFilter: "blur(1px)",
+          }}
+        />
+        {/* Inner shadow / depth */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            boxShadow: "inset 0 1px 1px rgba(255,255,255,0.3), inset 0 -1px 1px rgba(0,0,0,0.05)",
+          }}
+        />
+        {/* Top edge highlight */}
+        <div className="absolute inset-x-0 top-0 h-[1px] bg-white/40" />
+        {/* Bottom edge shadow */}
+        <div className="absolute inset-x-0 bottom-0 h-[1px] bg-black/10" />
         <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed font-semibold drop-shadow-sm">
             Most of us want<br />something different for our lives.
           </p>
-          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
+          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/80 leading-tight drop-shadow-sm">
             More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>, and <span className="text-[#B5D4FF] font-medium">attention</span>.
           </p>
-          <p className="mt-2 text-base md:text-lg text-white/50">
+          <p className="mt-2 text-base md:text-lg text-white/60 drop-shadow-sm">
             For loved ones, and projects, and rest.
           </p>
         </div>
