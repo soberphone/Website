@@ -54,11 +54,20 @@ export function EmotionalAppealSection() {
 
       {/* Part 2: The Desire - iOS Glass effect */}
       <div 
-        className="relative z-20 backdrop-blur-xl"
+        className="relative z-20 backdrop-blur-xl overflow-hidden"
         style={{
           backgroundColor: "rgba(40, 40, 40, 0.7)",
         }}
       >
+        {/* Background image for glass blur effect */}
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: "url('/images/emotional-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
         {/* Subtle border/shine at top */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
