@@ -87,7 +87,7 @@ export function EmotionalAppealSection() {
             </div>
 
             {/* Phone mockup - angled and dynamic */}
-            <div className="flex-shrink-0 relative lg:mr-[-60px]">
+            <div className="flex-shrink-0 relative lg:mr-[-60px] lg:ml-[-40px]">
               <div 
                 className="transform rotate-[12deg] translate-x-4 lg:translate-x-8"
                 style={{
