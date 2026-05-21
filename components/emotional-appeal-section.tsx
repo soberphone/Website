@@ -53,7 +53,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-10 bg-[#2e2e2e]">
+      <div className="relative z-10 bg-[#2e2e2e] pb-32 md:pb-40">
         {/* Vignette overlay */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -74,8 +74,13 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Part 3: The Solution */}
-      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
+      {/* Part 3: The Solution - Large circle emerging */}
+      <div 
+        className="relative px-6 pt-32 md:pt-40 pb-20 md:pb-28 bg-[#6FA3F7] -mt-32 md:-mt-40"
+        style={{
+          borderRadius: "50% 50% 0 0 / 80px 80px 0 0",
+        }}
+      >
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
