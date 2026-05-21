@@ -46,8 +46,13 @@ export function EmotionalAppealSection() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
             But we&apos;re also<br />totally hooked.
           </h2>
-          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
+          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto mb-12 md:mb-16">
             Hours, weeks, and years of our lives spent unintentionally absorbed.
+          </p>
+
+          {/* The Desire */}
+          <p className="font-serif text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-lg mx-auto text-balance">
+            Most of us want something different for our lives. More time, presence, and attention. For loved ones, and projects, and rest.
           </p>
         </div>
       </div>
