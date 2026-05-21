@@ -34,7 +34,7 @@ export function EmotionalAppealSection() {
         <div className="relative z-10 max-w-2xl mx-auto text-center mb-[120px] sm:mb-[75px]">
           {/* The Love */}
           <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
-            There&apos;s a lot to love about our screens &mdash;
+            There&apos;s a lot to love about our screens -
           </p>
           <p className="text-base md:text-lg text-foreground/50 leading-relaxed mb-10 md:mb-14">
             the utility, the connection, the whole world in our hands.
@@ -51,7 +51,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="px-6 py-20 md:py-28 bg-[#1E1C1A]">
+      <div className="px-6 py-20 md:py-28 bg-[#6FA3F7]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-white/40 mb-5">
             A new approach
