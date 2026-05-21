@@ -78,7 +78,7 @@ export function HowItWorksSection() {
         }}
       />
 
-      {/* Striped transition: solid CTA blue stripes thin out and gaps widen as they descend into the black */}
+      {/* Striped transition: solid CTA blue stripes thin out and gaps widen as they descend into the black. The actual phone halo from EmotionalAppealSection now extends down across the section boundary and naturally tints these stripes the same way it tints the page above. */}
       <div aria-hidden className="relative w-full">
         <div className="h-16 md:h-20 bg-[#6FA3F7]" />
         <div className="h-4 md:h-5" />
@@ -88,16 +88,6 @@ export function HowItWorksSection() {
         <div className="h-10 md:h-12" />
         <div className="h-1.5 md:h-2 bg-[#6FA3F7]" />
       </div>
-
-      {/* Continuation of the phone halo from the page above — same gradient as the phone glow, positioned to mirror the phone's screen position so the halo flows continuously across the section boundary on top of the solid stripes */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 lg:left-[72%] -translate-x-1/2 -top-[1700px] w-[2000px] h-[2000px] rounded-full blur-3xl z-10"
-        style={{
-          background:
-            "radial-gradient(circle at center, rgba(195,220,246,0.85) 0%, rgba(195,220,246,0.5) 30%, rgba(195,220,246,0.2) 55%, rgba(195,220,246,0) 75%)",
-        }}
-      />
 
       <div className="px-6 pt-16 md:pt-24 max-w-6xl mx-auto">
         {/* Section Header */}
