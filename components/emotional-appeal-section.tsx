@@ -75,7 +75,12 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 3: The Solution - Large circle emerging from black */}
-      <div className="relative bg-[#2e2e2e] pt-8 md:pt-12">
+      <div 
+        className="relative pt-8 md:pt-12"
+        style={{
+          background: "linear-gradient(to bottom, #1a1a1a 0%, #2e2e2e 100%)"
+        }}
+      >
         {/* Giant blue circle - only top arc visible */}
         <div 
           className="relative mx-auto bg-[#6FA3F7] px-6 pt-20 md:pt-28 pb-20 md:pb-28"
