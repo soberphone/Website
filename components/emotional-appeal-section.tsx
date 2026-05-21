@@ -53,7 +53,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e] overflow-hidden">
+      <div className="relative z-10 px-6 py-16 md:py-20 bg-[#2e2e2e] overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)]">
         {/* Vignette overlay */}
         <div 
           className="absolute inset-0 pointer-events-none"
