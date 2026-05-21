@@ -52,11 +52,11 @@ export function HeroSection() {
           </h1>
 
           <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[30px] sm:mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
-            Stay Connected. Not Consumed.
+            Stay connected. Not consumed.
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
-            Find screen-life balance with a social solution that works.
+            Screen-life balance with the support of your friends.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">

@@ -23,7 +23,7 @@ export function EmotionalAppealSection() {
 
       {/* Part 1: The Love & The Hook - Full background image */}
       <div
-        className="relative px-6 pt-20 pb-48 md:pt-28 md:pb-64 min-h-[90vh] flex flex-col justify-end"
+        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
@@ -33,94 +33,64 @@ export function EmotionalAppealSection() {
         }}
       >
         {/* Text container - bottom centered */}
-        <div className="relative z-10 max-w-2xl mx-auto text-center mb-[120px] sm:mb-[75px]">
+        <div className="relative z-10 max-w-2xl mx-auto text-center mb-[220px] sm:mb-[175px]">
           {/* The Love */}
-          <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
-            There&apos;s a lot to love about our screens -
-          </p>
-          <p className="text-base md:text-lg text-foreground/50 leading-relaxed mb-10 md:mb-14">
-            the utility, the connection, the whole world in our hands.
-          </p>
-          
-          {/* The Hook - larger, bolder */}
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
-            But we&apos;re also<br />totally hooked.
-          </h2>
-          <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
-            Hours, weeks, and years of our lives spent unintentionally absorbed.
-          </p>
-        </div>
-      </div>
-
-      {/* Floating blue circle with Desire text - straddles Part 1 and Part 3 */}
-      <div className="relative z-30 flex justify-center px-8 md:px-16 lg:px-24 -mt-56 md:-mt-72 mb-[-220px] md:mb-[-280px]">
-        <div 
-          className="relative w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full bg-[#6FA3F7] flex items-center justify-center p-10 md:p-16 ml-12 md:ml-24"
-          style={{
-            boxShadow: "0 30px 80px rgba(0,0,0,0.25)"
-          }}
-        >
-          <div className="relative text-center">
-            <p className="font-serif text-xl md:text-2xl lg:text-3xl text-white leading-relaxed font-semibold">
-              Most of us want<br />something different<br />for our lives.
+          <div className="-translate-y-20">
+            <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
+              There&apos;s a lot to love about our screens -
             </p>
-            <p className="mt-5 text-lg md:text-xl text-white/80 leading-tight">
-              More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>,<br />and <span className="text-white font-medium">attention</span>.
-            </p>
-            <p className="mt-3 text-base md:text-lg text-white/60">
-              For loved ones, projects, and rest.
+            <p className="text-base md:text-lg text-foreground/50 leading-relaxed mb-10 md:mb-14">
+              the utility, the connection, the whole world in our hands.
             </p>
           </div>
+          
+          {/* The Hook - larger, bolder */}
+          <div className="-translate-y-[50px]">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
+              But we&apos;re also<br />totally hooked.
+            </h2>
+            <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
+              Hours, weeks, and years of our lives spent unintentionally absorbed.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom statement - absolutely positioned, does not affect layout */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pointer-events-none">
+          <h3 className="font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-[#6FA3F7] max-w-5xl mx-auto translate-y-[1.25em]">
+            Do you want<br />something different<br /><span className="text-white">for your life?</span>
+          </h3>
         </div>
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="relative px-6 pt-48 md:pt-56 pb-20 md:pb-28 bg-[#6FA3F7]">
+      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col items-center lg:flex-row lg:items-end gap-12 lg:gap-16">
             {/* Text content */}
-            <div className="flex-1 text-center lg:text-left">
-              <p className="text-base md:text-lg font-sans uppercase tracking-[0.25em] text-white/50 mb-6">
-                A new approach
-              </p>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.15] tracking-tight text-white mb-7 text-balance">
-                Define your version of balance and bring it to life
+            <div className="flex-1">
+              <h3 className="font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-white">
+                Time, presence, and attention.<br />For loved ones. Projects. Rest.
               </h3>
-              <p className="text-2xl md:text-3xl text-[#FFD4B8] font-serif mb-12">
-                with Soberphone.
-              </p>
-
-              {/* Value Props */}
-              <div className="flex flex-col gap-5 max-w-lg mx-auto lg:mx-0 text-left">
-                <div className="flex items-start gap-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FFD4B8] mt-3 shrink-0" />
-                  <span className="text-lg md:text-xl text-white/90">
-                    No dumb phones or cold-turkey
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/60 mt-3 shrink-0" />
-                  <span className="text-lg md:text-xl text-white/90">
-                    Keep what you love, and get support with the rest
-                  </span>
-                </div>
-              </div>
+              <h3 className="relative z-30 font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-[#3D6BBF]">
+                Soberphone helps you build this balance.
+              </h3>
             </div>
 
             {/* Phone mockup */}
-            <div className="flex-shrink-0 relative lg:mr-[-60px]">
+            <div className="flex-shrink-0 relative lg:ml-auto lg:mr-[-60px]">
               {/* Soft round glow behind phone, blending into the blue */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[2000px] rounded-full blur-3xl"
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[2000px] rounded-full blur-3xl z-20"
                 style={{
                   background:
                     "radial-gradient(circle at center, rgba(195,220,246,0.85) 0%, rgba(195,220,246,0.5) 30%, rgba(195,220,246,0.2) 55%, rgba(195,220,246,0) 75%)",
                 }}
               />
               <div
-                className="relative lg:-translate-x-10"
+                className="relative lg:-translate-x-10 z-30"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
                 }}
@@ -134,6 +104,27 @@ export function EmotionalAppealSection() {
               </div>
             </div>
           </div>
+
+          {/* Colorful bullets */}
+          <div className="mt-16 md:mt-24 flex flex-wrap items-center gap-x-10 md:gap-x-14 gap-y-4">
+            <div className="flex items-center gap-4">
+              <div className="w-5 h-5 rounded-full bg-[#FFD4B8] shrink-0" />
+              <span className="text-2xl md:text-3xl text-white/90">No cold turkey.</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-5 h-5 rounded-full bg-[#FFD68A] shrink-0" />
+              <span className="text-2xl md:text-3xl text-white/90">No dumb phones.</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-5 h-5 rounded-full bg-[#C3DCF6] shrink-0" />
+              <span className="text-2xl md:text-3xl text-white/90">No hyper-gamification.</span>
+            </div>
+          </div>
+
+          {/* Tagline */}
+          <p className="mt-8 md:mt-10 font-serif font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
+            Just an app using social support to motivate<br className="hidden xl:inline" /> real change.
+          </p>
         </div>
       </div>
     </section>
