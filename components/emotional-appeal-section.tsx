@@ -52,46 +52,23 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Part 2: The Desire - iOS Glass effect */}
-      <div className="relative z-20 overflow-hidden">
-        {/* Background image layer - this gets blurred */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: "url('/images/emotional-bg.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(50px) saturate(1.8)",
-            transform: "scale(1.1)",
-          }}
-        />
-        {/* Glass tint overlay */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.15)",
-            backdropFilter: "blur(1px)",
-          }}
-        />
-        {/* Inner shadow / depth */}
+      {/* Part 2: The Desire - Color bar */}
+      <div className="relative z-20 bg-[#2e2e2e]">
+        {/* Vignette overlay */}
         <div 
           className="absolute inset-0 pointer-events-none"
           style={{
-            boxShadow: "inset 0 1px 1px rgba(255,255,255,0.3), inset 0 -1px 1px rgba(0,0,0,0.05)",
+            background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
           }}
         />
-        {/* Top edge highlight */}
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-white/40" />
-        {/* Bottom edge shadow */}
-        <div className="absolute inset-x-0 bottom-0 h-[1px] bg-black/10" />
         <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed font-semibold drop-shadow-sm">
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
             Most of us want<br />something different for our lives.
           </p>
-          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/80 leading-tight drop-shadow-sm">
+          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
             More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>, and <span className="text-[#B5D4FF] font-medium">attention</span>.
           </p>
-          <p className="mt-2 text-base md:text-lg text-white/60 drop-shadow-sm">
+          <p className="mt-2 text-base md:text-lg text-white/50">
             For loved ones, and projects, and rest.
           </p>
         </div>
