@@ -6,24 +6,16 @@ export function EmotionalAppealSection() {
   return (
     <section
       id="emotional-appeal"
-      className="relative z-10 overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
+      className="relative z-30"
       style={{
         transform: "translateZ(0)",
         willChange: "transform",
         backfaceVisibility: "hidden",
       }}
     >
-      {/* Drag Handle */}
+      {/* Part 1: The Love & The Hook - Full background image. Rounded sheet + clip lives here (not on the section) so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
       <div
-        aria-hidden
-        className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2 z-20"
-      >
-        <div className="h-1.5 w-12 rounded-full bg-foreground/20" />
-      </div>
-
-      {/* Part 1: The Love & The Hook - Full background image */}
-      <div
-        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end"
+        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end rounded-t-[2.5rem] md:rounded-t-[3.5rem] overflow-hidden shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
@@ -32,6 +24,13 @@ export function EmotionalAppealSection() {
           backgroundColor: "#FAF5F0",
         }}
       >
+        {/* Drag Handle */}
+        <div
+          aria-hidden
+          className="absolute top-3 md:top-4 left-1/2 -translate-x-1/2 z-20"
+        >
+          <div className="h-1.5 w-12 rounded-full bg-foreground/20" />
+        </div>
         {/* Text container - bottom centered */}
         <div className="relative z-10 max-w-2xl mx-auto text-center mb-[220px] sm:mb-[175px]">
           {/* The Love */}
