@@ -56,7 +56,7 @@ export function EmotionalAppealSection() {
       <div className="px-6 py-20 md:py-28 bg-[#6FA3F7]">
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-6">
             {/* Text content */}
             <div className="flex-1 text-center lg:text-left">
               <p className="text-sm md:text-base font-sans uppercase tracking-[0.25em] text-white/50 mb-5">
@@ -87,9 +87,9 @@ export function EmotionalAppealSection() {
             </div>
 
             {/* Phone mockup - angled and dynamic */}
-            <div className="flex-shrink-0 relative lg:mr-[-60px] lg:ml-[-40px]">
+            <div className="flex-shrink-0 relative lg:mr-[-60px]">
               <div 
-                className="transform rotate-[12deg] translate-x-4 lg:translate-x-8"
+                className="transform rotate-[12deg]"
                 style={{
                   filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
                 }}
