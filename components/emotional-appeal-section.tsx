@@ -75,20 +75,7 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="relative px-6 pt-20 md:pt-28 pb-20 md:pb-28 bg-[#6FA3F7]">
-        {/* Curved top - black extending down into blue */}
-        <div className="absolute top-0 left-0 right-0 overflow-hidden leading-[0]">
-          <svg 
-            className="relative block w-full h-[80px] md:h-[120px]" 
-            viewBox="0 0 1200 120" 
-            preserveAspectRatio="none"
-          >
-            <path 
-              d="M0,0 L0,0 Q600,120 1200,0 L1200,0 Z" 
-              fill="#2e2e2e"
-            />
-          </svg>
-        </div>
+      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
