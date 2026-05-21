@@ -56,7 +56,7 @@ export function EmotionalAppealSection() {
       <div className="px-6 py-16 md:py-20 bg-[#2e2e2e]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
-            Most of us want something different for our lives.
+            Most of us want<br />something different for our lives.
           </p>
           <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
             More <span className="text-white font-medium">time</span>, <span className="text-white font-medium">presence</span>, and <span className="text-white font-medium">attention</span>.
