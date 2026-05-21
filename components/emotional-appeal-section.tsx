@@ -24,14 +24,14 @@ export function EmotionalAppealSection() {
         className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[90vh] flex flex-col justify-end"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
-          backgroundSize: "100% auto",
-          backgroundPosition: "center top",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#FAF5F0",
         }}
       >
         {/* Text container - bottom centered */}
-        <div className="relative z-10 max-w-2xl mx-auto text-center">
+        <div className="relative z-10 max-w-2xl mx-auto text-center mb-[120px] sm:mb-[75px]">
           {/* The Love */}
           <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
             There&apos;s a lot to love about our screens &mdash;
