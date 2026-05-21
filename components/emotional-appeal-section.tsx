@@ -23,7 +23,7 @@ export function EmotionalAppealSection() {
 
       {/* Part 1: The Love & The Hook - Full background image */}
       <div
-        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[90vh] flex flex-col justify-end"
+        className="relative px-6 pt-20 pb-48 md:pt-28 md:pb-64 min-h-[90vh] flex flex-col justify-end"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
@@ -52,30 +52,37 @@ export function EmotionalAppealSection() {
         </div>
       </div>
 
-      {/* Part 2: The Desire - Color bar */}
-      <div className="relative z-20 bg-[#2e2e2e]">
-        {/* Vignette overlay */}
+      {/* Floating black circle with Desire text - straddles Part 1 and Part 3 */}
+      <div className="relative z-30 flex justify-start px-8 md:px-16 lg:px-24 -mt-40 md:-mt-52 mb-[-160px] md:mb-[-200px]">
         <div 
-          className="absolute inset-0 pointer-events-none"
+          className="relative w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-full bg-[#2e2e2e] flex items-center justify-center p-8 md:p-12"
           style={{
-            background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
+            boxShadow: "0 25px 60px rgba(0,0,0,0.3)"
           }}
-        />
-        <div className="relative px-6 py-16 md:py-20 max-w-3xl mx-auto text-center">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 leading-relaxed font-semibold">
-            Most of us want<br />something different for our lives.
-          </p>
-          <p className="mt-6 text-xl md:text-2xl lg:text-3xl text-white/70 leading-tight">
-            More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>, and <span className="text-[#B5D4FF] font-medium">attention</span>.
-          </p>
-          <p className="mt-2 text-base md:text-lg text-white/50">
-            For loved ones, and projects, and rest.
-          </p>
+        >
+          {/* Vignette inside circle */}
+          <div 
+            className="absolute inset-0 rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
+            }}
+          />
+          <div className="relative text-center">
+            <p className="font-serif text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-semibold">
+              Most of us want<br />something different<br />for our lives.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-white/70 leading-tight">
+              More <span className="text-[#FFD68A] font-medium">time</span>, <span className="text-[#F4A988] font-medium">presence</span>,<br />and <span className="text-[#B5D4FF] font-medium">attention</span>.
+            </p>
+            <p className="mt-2 text-sm md:text-base text-white/50">
+              For loved ones, projects, and rest.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
+      <div className="relative px-6 pt-48 md:pt-56 pb-20 md:pb-28 bg-[#6FA3F7]">
         <div className="max-w-5xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
