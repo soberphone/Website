@@ -43,40 +43,37 @@ export function FeaturesSection() {
         />
 
       {/* The Philosophy */}
-      <div id="philosophy" className="relative max-w-2xl mx-auto text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12 scroll-mt-56">
-        <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
-          The Philosophy
-        </p>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4 text-balance">
-          You don&rsquo;t have to <span className="italic text-[#6FA3F7]">do this alone.</span>
-        </h2>
-        <p className="font-serif italic text-xl md:text-2xl text-foreground/55 leading-relaxed mb-12 text-pretty">
-          Behavioral research has proven the point.
-        </p>
+      <div className="max-w-6xl mx-auto">
+        <div id="philosophy" className="relative md:ml-[110px] mt-[20px] max-w-2xl text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12 scroll-mt-56">
+          <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
+            The Philosophy
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-8 text-balance">
+            You don&rsquo;t have to <span className="italic text-[#6FA3F7]">do this alone.</span>
+          </h2>
 
-        <div className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed text-pretty">
-          <p>
-            Lasting change comes from being seen, supported, and accountable to people who care about us. When we take our struggles out of isolation and embed them in community and connection, our lives begin to change at the root.
-          </p>
-          <p>
-            <strong className="font-semibold text-[#6FA3F7] text-3xl md:text-4xl mr-2 align-baseline">Soberphone</strong> works where other tools don&rsquo;t because it motivates change at a deeper level.
-          </p>
-          <p className="font-serif text-xl md:text-2xl text-foreground leading-snug">
-            Beyond{" "}
-            <span className="inline-flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#F4A988] inline-block" aria-hidden />
-              <strong className="font-semibold">willpower,</strong>
-            </span>{" "}
-            <span className="inline-flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#FFD68A] inline-block" aria-hidden />
-              <strong className="font-semibold">restriction,</strong>
-            </span>{" "}
-            and{" "}
-            <span className="inline-flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#8FB8F9] inline-block" aria-hidden />
-              <strong className="font-semibold">hyper-gamification.</strong>
-            </span>
-          </p>
+          <div className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed text-pretty">
+            <p>
+              Lasting change comes from being seen, supported, and accountable to people who care about us. When we take our struggles out of isolation and embed them in community and connection, our lives begin to change at the root.
+            </p>
+            <p className="font-serif text-xl md:text-2xl text-foreground leading-snug">
+              <strong className="font-semibold text-[#6FA3F7] text-3xl md:text-4xl mr-2 align-baseline">Soberphone</strong> works where other tools don&rsquo;t because it goes beyond:
+            </p>
+            <ul className="mt-3 space-y-2 font-serif text-xl md:text-2xl text-foreground leading-snug">
+              <li className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-[#F4A988] inline-block shrink-0" aria-hidden />
+                <strong className="font-semibold">willpower,</strong>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-[#FFD68A] inline-block shrink-0" aria-hidden />
+                <strong className="font-semibold">restriction,</strong>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-3 h-3 rounded-full bg-[#8FB8F9] inline-block shrink-0" aria-hidden />
+                <strong className="font-semibold">and hyper-gamification.</strong>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

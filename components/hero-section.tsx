@@ -2,64 +2,47 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { PhoneMockup } from "@/components/phone-mockup"
 import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
 export function HeroSection() {
   return (
-    <section className="relative isolate z-10 flex flex-col items-center px-6 pt-[129px] md:pt-[143px] pb-20 md:pb-28 overflow-hidden min-h-[calc(100svh-44px)]">
+    <section className="relative isolate z-30 flex flex-col items-center px-6 pt-[50px] md:pt-[65px] xl:pt-[140px] pb-12 md:pb-16 overflow-x-clip min-h-[calc(100svh-132px)] xl:min-h-[calc(100svh-42px)]">
       <Image
         src="/images/hero-bg.png"
         alt=""
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 -z-10 object-cover select-none"
+        className="absolute inset-0 -z-10 object-cover object-[25%_80%] md:object-[45%_80%] lg:object-[40%_80%] xl:object-[25%_80%] select-none"
         draggable={false}
       />
-      <div className="w-full max-w-3xl mx-auto flex flex-col items-center text-center">
-        <style>{`
-          @keyframes sp-orb-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-          @keyframes sp-orb-bob { 0% { transform: translateY(0); } 100% { transform: translateY(-12px); } }
-          @media (prefers-reduced-motion: reduce) {
-            .sp-orb-bob, .sp-orb-spin { animation: none !important; }
-          }
-        `}</style>
+      <div className="w-full max-w-6xl mx-auto flex flex-col-reverse xl:flex-row items-center gap-10 xl:gap-16 xl:pl-40 translate-y-[150px] xl:translate-y-[18px]">
         <div
-          className="sp-orb-bob mb-[22px]"
-          style={{ animation: "sp-orb-bob 4s ease-in-out infinite alternate" }}
+          className="flex-shrink-0 mt-[50px] xl:mt-0 xl:-ml-[100px]"
+          style={{ filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))" }}
         >
-          <Image
-            src="/images/orbs/vibrant.png"
-            alt="Soberphone"
+          <PhoneMockup
+            src="/images/app-screenshot.png"
+            alt="Soberphone app"
+            width={260}
             priority
-            width={512}
-            height={512}
-            draggable={false}
-            className="sp-orb-spin w-32 sm:w-36 md:w-40 lg:w-44 xl:w-48 h-auto select-none"
-            style={{ animation: "sp-orb-spin 20s linear infinite" }}
           />
         </div>
-
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-          <h1
-            className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
-            style={{
-              backgroundImage:
-                "linear-gradient(270deg, #6FA3F7 0%, #5B89E8 30%, #F4A988 70%, #FFD68A 100%)",
-            }}
-          >
+        <div className="flex flex-col items-center text-center xl:items-start xl:text-left max-w-3xl -translate-y-[35px] xl:translate-y-0">
+          <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap text-white text-balance">
             Soberphone
           </h1>
 
-          <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-[30px] sm:mt-[15px] mb-1 sm:whitespace-nowrap text-balance">
-            Stay connected. Not consumed.
+          <h2 className="font-sans text-lg sm:text-xl md:text-2xl font-semibold text-foreground/85 leading-snug mt-2 mb-1 sm:whitespace-nowrap text-balance">
+            Freedom from our screens. Together.
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
-            Screen-life balance with the support of your friends.
+            Find balance with a social solution that motivates real change.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center xl:items-start gap-4">
             <Button
               asChild
               size="lg"
