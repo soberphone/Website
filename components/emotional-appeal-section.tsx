@@ -13,9 +13,9 @@ export function EmotionalAppealSection() {
         backfaceVisibility: "hidden",
       }}
     >
-      {/* Part 1: The Love & The Hook - Full background image. Rounded sheet lives here (not on the section) so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. No overflow-hidden so the "for your life?" bottom statement can bleed onto Part 3's blue. */}
+      {/* Part 1: What's the Deal — styled to mirror PhilosophySection. Rounded sheet kept so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
       <div
-        className="relative px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[110vh] flex flex-col justify-end rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
+        className="relative px-6 pt-48 md:pt-64 pb-64 md:pb-80 rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
@@ -31,54 +31,100 @@ export function EmotionalAppealSection() {
         >
           <div className="h-1.5 w-12 rounded-full bg-foreground/20" />
         </div>
-        {/* Text container - bottom centered */}
-        <div className="relative z-10 max-w-2xl mx-auto text-center mb-[220px] sm:mb-[175px]">
-          {/* The Love */}
-          <div className="-translate-y-20">
-            <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed mb-2">
-              There&apos;s a lot to love about our screens -
-            </p>
-            <p className="text-base md:text-lg text-foreground/50 leading-relaxed mb-10 md:mb-14">
-              the utility, the connection, the whole world in our hands.
-            </p>
-          </div>
-          
-          {/* The Hook - larger, bolder */}
-          <div className="-translate-y-[50px]">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4">
-              But we&apos;re also<br />totally hooked.
-            </h2>
-            <p className="text-base md:text-lg text-foreground/50 leading-relaxed max-w-md mx-auto">
-              Hours, weeks, and years of our lives spent unintentionally absorbed.
-            </p>
-          </div>
-        </div>
 
-        {/* Bottom statement - absolutely positioned, does not affect layout */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pointer-events-none">
-          <h3 className="font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-[#6FA3F7] max-w-5xl mx-auto translate-y-[1.25em]">
-            Do you want<br />something different<br /><span className="text-white">for your life?</span>
-          </h3>
+        <div className="max-w-6xl mx-auto">
+          <div className="md:ml-[80px] lg:ml-[110px] mt-[20px] max-w-2xl border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12">
+            <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
+              What&apos;s the deal?
+            </p>
+
+            {/* The Love */}
+            <div className="mb-10 md:mb-14">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4 text-balance">
+                There&apos;s a lot to <span className="italic text-[#6FA3F7]">love</span> about our screens.
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed text-pretty">
+                The utility, the connection, the whole world in our hands.
+              </p>
+            </div>
+
+            {/* The Hook */}
+            <div className="mb-10 md:mb-14">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4 text-balance">
+                But we&apos;re <span className="italic text-[#6FA3F7]">totally hooked.</span>
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed text-pretty">
+                Hours, weeks, and years of our lives spent unintentionally absorbed.
+              </p>
+            </div>
+
+            {/* The Need */}
+            <div className="mb-10 md:mb-14">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4 text-balance">
+                We&apos;re <span className="italic text-[#6FA3F7]">not meant</span> to face this alone.
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed text-pretty">
+                It takes a lot more than willpower to get free. And most existing solutions miss the emotional and relational core of the issue.
+              </p>
+            </div>
+
+            {/* The Truth - healing in connection */}
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-[1.1] tracking-tight text-foreground mb-4 text-balance">
+                Healing happens <span className="italic text-[#6FA3F7]">in connection.</span> Not in isolation.
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed text-pretty">
+                Decades of research on compulsion and addiction are clear on this.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7]">
-        <div className="max-w-5xl mx-auto">
+      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7] overflow-x-clip">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto">
           {/* Two-column layout: Text left, Phone right */}
           <div className="flex flex-col items-center lg:flex-row lg:items-end gap-12 lg:gap-16">
             {/* Text content */}
-            <div className="flex-1">
-              <h3 className="font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-white">
-                Time, presence, and attention.<br />For loved ones. Projects. Rest.
+            <div className="flex-1 lg:pl-20">
+              {/* Our Answer intro */}
+              <div className="relative z-30 mb-8 md:mb-10">
+                <p className="text-sm uppercase tracking-widest text-white/80 font-medium mb-4">
+                  Our Answer
+                </p>
+                <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-md xl:max-w-2xl">
+                  Soberphone is a mobile app that uses social support to change your life.
+                </p>
+              </div>
+              <h3 className="font-serif font-medium tracking-tight leading-tight text-left text-4xl md:text-5xl lg:text-6xl text-white">
+                Time,<br />presence,<br />and attention.
               </h3>
-              <h3 className="relative z-30 font-serif font-bold tracking-tight leading-[1.05] text-left uppercase text-4xl md:text-6xl lg:text-7xl text-[#3D6BBF]">
-                Soberphone helps you build this balance.
+              <p className="font-sans text-xl md:text-2xl lg:text-3xl text-white/85 text-left mt-4">
+                For loved ones. Projects. Rest.
+              </p>
+              <ul className="mt-6 md:mt-8 flex flex-col gap-3">
+                <li className="flex items-center gap-4">
+                  <span className="w-5 h-5 rounded-full bg-[#FFD4B8] shrink-0" aria-hidden />
+                  <span className="text-2xl md:text-3xl text-white/90">No cold turkey.</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="w-5 h-5 rounded-full bg-[#FFD68A] shrink-0" aria-hidden />
+                  <span className="text-2xl md:text-3xl text-white/90">No dumb phones.</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="w-5 h-5 rounded-full bg-[#C3DCF6] shrink-0" aria-hidden />
+                  <span className="text-2xl md:text-3xl text-white/90">No hyper-gamification.</span>
+                </li>
+              </ul>
+              {/* Closing line — placed above the phone on mobile/iPad portrait; the lg+ copy below sits under the row */}
+              <h3 className="lg:hidden relative z-30 mt-8 md:mt-12 font-serif font-medium tracking-tight leading-tight text-left text-3xl md:text-4xl text-white text-balance max-w-3xl">
+                Just flexible support for the screen-life balance you want.
               </h3>
             </div>
 
             {/* Phone mockup */}
-            <div className="flex-shrink-0 relative lg:ml-auto lg:mr-[-60px]">
+            <div className="flex-shrink-0 relative lg:ml-auto lg:mr-0">
               {/* Soft round glow behind phone, blending into the blue */}
               <div
                 aria-hidden
@@ -95,8 +141,8 @@ export function EmotionalAppealSection() {
                 }}
               >
                 <PhoneMockup
-                  src="/images/app-screenshot.png"
-                  alt="Soberphone app showing personalized greeting"
+                  src="/images/screen-goal-reminder.png"
+                  alt="Soberphone Goal Reminder screen"
                   width={300}
                   className=""
                 />
@@ -104,26 +150,10 @@ export function EmotionalAppealSection() {
             </div>
           </div>
 
-          {/* Colorful bullets */}
-          <div className="mt-16 md:mt-24 flex flex-wrap items-center gap-x-10 md:gap-x-14 gap-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-5 h-5 rounded-full bg-[#FFD4B8] shrink-0" />
-              <span className="text-2xl md:text-3xl text-white/90">No cold turkey.</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-5 h-5 rounded-full bg-[#FFD68A] shrink-0" />
-              <span className="text-2xl md:text-3xl text-white/90">No dumb phones.</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-5 h-5 rounded-full bg-[#C3DCF6] shrink-0" />
-              <span className="text-2xl md:text-3xl text-white/90">No hyper-gamification.</span>
-            </div>
-          </div>
-
-          {/* Tagline */}
-          <p className="mt-8 md:mt-10 font-serif font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-            Just an app using social support to motivate<br className="hidden xl:inline" /> real change.
-          </p>
+          {/* Closing line — lg+ only; mobile/iPad portrait has its own copy inside the text column, above the phone */}
+          <h3 className="hidden lg:block relative z-30 mt-8 md:mt-12 lg:pl-20 font-serif font-medium tracking-tight leading-tight text-left text-3xl md:text-4xl lg:text-5xl text-white text-balance max-w-3xl">
+            Just flexible support for the screen-life balance you want.
+          </h3>
         </div>
       </div>
     </section>

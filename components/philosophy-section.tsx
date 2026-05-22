@@ -16,7 +16,7 @@ export function PhilosophySection() {
       />
 
       <div className="max-w-6xl mx-auto">
-        <div className="md:ml-[110px] mt-[20px]">
+        <div className="md:ml-[80px] lg:ml-[110px] mt-[20px]">
           <h2 className="font-serif font-medium leading-tight tracking-tight text-white mb-6 text-balance text-3xl md:text-4xl lg:text-5xl">
             &ldquo;Hands down the most effective <br />tool I&rsquo;ve found&hellip; changed my life.
           </h2>
