@@ -6,7 +6,7 @@ export function EmotionalAppealSection() {
   return (
     <section
       id="emotional-appeal"
-      className="relative z-30"
+      className="relative z-30 -scroll-mt-10"
       style={{
         transform: "translateZ(0)",
         willChange: "transform",
@@ -100,21 +100,21 @@ export function EmotionalAppealSection() {
               <h3 className="font-serif font-medium tracking-tight leading-tight text-left text-4xl md:text-5xl lg:text-6xl text-white">
                 Time,<br />presence,<br />and attention.
               </h3>
-              <p className="font-sans text-xl md:text-2xl lg:text-3xl text-white/85 text-left mt-4">
+              <p className="font-sans font-light text-xl md:text-2xl lg:text-3xl text-white text-left mt-1">
                 For loved ones. Projects. Rest.
               </p>
               <ul className="mt-6 md:mt-8 flex flex-col gap-3">
                 <li className="flex items-center gap-4">
-                  <span className="w-5 h-5 rounded-full bg-[#FFD4B8] shrink-0" aria-hidden />
-                  <span className="text-2xl md:text-3xl text-white/90">No cold turkey.</span>
+                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#F4A988] shrink-0" aria-hidden />
+                  <span className="text-xl md:text-2xl text-white/90">No cold turkey.</span>
                 </li>
                 <li className="flex items-center gap-4">
-                  <span className="w-5 h-5 rounded-full bg-[#FFD68A] shrink-0" aria-hidden />
-                  <span className="text-2xl md:text-3xl text-white/90">No dumb phones.</span>
+                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#FFD68A] shrink-0" aria-hidden />
+                  <span className="text-xl md:text-2xl text-white/90">No dumb phones.</span>
                 </li>
                 <li className="flex items-center gap-4">
-                  <span className="w-5 h-5 rounded-full bg-[#C3DCF6] shrink-0" aria-hidden />
-                  <span className="text-2xl md:text-3xl text-white/90">No hyper-gamification.</span>
+                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#3D6BBF] shrink-0" aria-hidden />
+                  <span className="text-xl md:text-2xl text-white/90">No hyper-gamification.</span>
                 </li>
               </ul>
               {/* Closing line — placed above the phone on mobile/iPad portrait; the lg+ copy below sits under the row */}

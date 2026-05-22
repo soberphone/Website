@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -37,6 +38,15 @@ export function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2">
+            <Image
+              src="/images/soberphone-logo-mark.png"
+              alt=""
+              width={180}
+              height={260}
+              priority
+              className="h-7 md:h-8 w-auto select-none"
+              draggable={false}
+            />
             <span className="font-serif text-xl md:text-2xl font-medium tracking-tight text-foreground">
               Soberphone
             </span>
@@ -44,6 +54,12 @@ export function Header() {
 
           {/* Contact + CTA */}
           <div className="hidden md:flex items-center gap-6">
+            <Link
+              href="/#emotional-appeal"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
+            </Link>
             <Link
               href="/#how-it-works"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -86,6 +102,13 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg border-b border-border/50 shadow-lg">
             <div className="flex flex-col p-6 gap-4">
+              <Link
+                href="/#emotional-appeal"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-base text-foreground hover:text-primary transition-colors"
+              >
+                About
+              </Link>
               <Link
                 href="/#how-it-works"
                 onClick={() => setIsMobileMenuOpen(false)}
