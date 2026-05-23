@@ -5,9 +5,11 @@ import { ArrowDown } from "lucide-react"
 
 export function EmotionalAppealSection() {
   return (
+    // -mt-12/-mt-16 overlaps up onto the quote's dark bottom (more than the corner
+    // radius) so the rounded-top corner cut-outs reveal the quote's black, not the page bg.
     <section
       id="emotional-appeal"
-      className="relative z-30 -scroll-mt-10"
+      className="relative z-30 -scroll-mt-10 -mt-12 md:-mt-16"
     >
       {/* Part 1: What's the Deal — styled to mirror PhilosophySection. Rounded sheet kept so the orb halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
       <div
