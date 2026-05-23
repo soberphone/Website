@@ -132,18 +132,21 @@ export function EmotionalAppealSection() {
               }}
             />
 
-            <div className="relative w-full h-full" style={{ filter: "drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2))" }}>
+            {/* Drop-shadow is applied per-orb (below) rather than on this wrapper:
+                a single filter spanning the whole tall, sparse column triggers a
+                WebKit tiling bug that paints a faint square behind a random orb. */}
+            <div className="relative w-full h-full">
               {/* Struggling — center at 0% (boundary: What's the Deal | Our Answer) */}
-              <Image src="/images/orbs/struggling.png" alt="Struggling" width={512} height={512} className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <Image src="/images/orbs/struggling.png" alt="Struggling" width={512} height={512} className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.2)]" draggable={false} />
               <ArrowDown aria-hidden className="absolute top-[12.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/difficult.png" alt="Difficult" width={512} height={512} className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <Image src="/images/orbs/difficult.png" alt="Difficult" width={512} height={512} className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.2)]" draggable={false} />
               <ArrowDown aria-hidden className="absolute top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/okay.png" alt="Okay" width={512} height={512} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <Image src="/images/orbs/okay.png" alt="Okay" width={512} height={512} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.2)]" draggable={false} />
               <ArrowDown aria-hidden className="absolute top-[62.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/great.png" alt="Great" width={512} height={512} className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <Image src="/images/orbs/great.png" alt="Great" width={512} height={512} className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.2)]" draggable={false} />
               <ArrowDown aria-hidden className="absolute top-[87.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
               {/* Vibrant — center at 100% (boundary: Our Answer | How It Works) */}
-              <Image src="/images/orbs/vibrant.png" alt="Vibrant" width={512} height={512} className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <Image src="/images/orbs/vibrant.png" alt="Vibrant" width={512} height={512} className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none drop-shadow-[0_20px_30px_rgba(0,0,0,0.2)]" draggable={false} />
             </div>
           </div>
         </div>
