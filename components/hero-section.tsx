@@ -34,11 +34,11 @@ export function HeroSection() {
             Soberphone
           </h1>
 
-          <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold text-white leading-snug mt-2 mb-1 sm:whitespace-nowrap text-balance">
+          <h2 className="font-sans text-lg max-[374px]:text-sm sm:text-2xl md:text-3xl font-bold text-white leading-snug mt-2 mb-1 whitespace-nowrap text-balance">
             Freedom from our screens. Together.
           </h2>
 
-          <p className="text-lg md:text-xl text-white leading-relaxed mb-10 text-balance">
+          <p className="text-base md:text-xl text-white leading-relaxed mb-10 text-balance">
             Set goals and get support where<br className="sm:hidden" /> it matters most.
           </p>
 
