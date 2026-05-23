@@ -36,8 +36,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   // No themeColor: lets mobile browsers use their native translucent address bar
   // (which blurs the page content behind it) instead of a solid gray fill.
+  // viewportFit 'cover': draw the page edge-to-edge *under* the browser bars and
+  // home-indicator safe area, so content shows through the translucent bar
+  // instead of iOS filling the safe-area strip with the grey root background.
   width: 'device-width',
   initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export default function RootLayout({

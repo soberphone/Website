@@ -8,11 +8,6 @@ export function EmotionalAppealSection() {
     <section
       id="emotional-appeal"
       className="relative z-30 -scroll-mt-10"
-      style={{
-        transform: "translateZ(0)",
-        willChange: "transform",
-        backfaceVisibility: "hidden",
-      }}
     >
       {/* Part 1: What's the Deal — styled to mirror PhilosophySection. Rounded sheet kept so the orb halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
       <div
@@ -125,7 +120,7 @@ export function EmotionalAppealSection() {
             {/* Halo centered on the orb column for soft glow */}
             <div
               aria-hidden
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
               style={{
                 background:
                   "radial-gradient(circle at center, rgba(195,220,246,0.5) 0%, rgba(195,220,246,0.25) 30%, rgba(195,220,246,0.08) 55%, rgba(195,220,246,0) 75%)",

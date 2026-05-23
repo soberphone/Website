@@ -58,11 +58,6 @@ export function FeaturesSection() {
     <section
       id="features"
       className="relative z-10"
-      style={{
-        transform: "translateZ(0)",
-        willChange: "transform",
-        backfaceVisibility: "hidden",
-      }}
     >
       {/* Backdrop matching the HowItWorks page bg — fills the rectangular section so the rounded sheet's corner cut-outs read as a continuation of the page above */}
       <div

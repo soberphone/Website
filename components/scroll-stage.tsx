@@ -45,13 +45,6 @@ export function ScrollStage() {
       <div
         ref={backLayerRef}
         className="relative z-0 w-full"
-        style={{
-          // Force GPU compositing so the back layer's pixels are cached and
-          // not re-rasterized when the rising sheet's shadow repaints above it.
-          transform: "translateZ(0)",
-          willChange: "transform",
-          backfaceVisibility: "hidden",
-        }}
       >
         <HeroSection />
         <PhilosophySection />

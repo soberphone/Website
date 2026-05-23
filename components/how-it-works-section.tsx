@@ -31,11 +31,6 @@ export function HowItWorksSection() {
     <section
       id="how-it-works"
       className="relative z-10 overflow-hidden pb-24 md:pb-32 scroll-mt-24"
-      style={{
-        transform: "translateZ(0)",
-        willChange: "transform",
-        backfaceVisibility: "hidden",
-      }}
     >
       <div
         className="absolute inset-0 -z-10"
