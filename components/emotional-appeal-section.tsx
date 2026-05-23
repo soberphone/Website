@@ -1,6 +1,7 @@
 "use client"
 
-import { PhoneMockup } from "@/components/phone-mockup"
+import Image from "next/image"
+import { ArrowDown } from "lucide-react"
 
 export function EmotionalAppealSection() {
   return (
@@ -13,9 +14,9 @@ export function EmotionalAppealSection() {
         backfaceVisibility: "hidden",
       }}
     >
-      {/* Part 1: What's the Deal — styled to mirror PhilosophySection. Rounded sheet kept so the phone halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
+      {/* Part 1: What's the Deal — styled to mirror PhilosophySection. Rounded sheet kept so the orb halo inside Part 3 can extend down past the section's bottom into HowItWorks. */}
       <div
-        className="relative px-6 pt-48 md:pt-64 pb-64 md:pb-80 rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
+        className="relative px-6 pt-32 md:pt-44 pb-64 md:pb-80 rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)]"
         style={{
           backgroundImage: "url('/images/emotional-bg.png')",
           backgroundSize: "cover",
@@ -33,7 +34,7 @@ export function EmotionalAppealSection() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="md:ml-[80px] lg:ml-[110px] mt-[20px] max-w-2xl border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12">
+          <div className="md:ml-0 lg:ml-[110px] mt-[20px] max-w-2xl border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12">
             <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
               What&apos;s the deal?
             </p>
@@ -82,78 +83,69 @@ export function EmotionalAppealSection() {
       </div>
 
       {/* Part 3: The Solution */}
-      <div className="relative px-6 py-20 md:py-28 bg-[#6FA3F7] overflow-x-clip">
-        <div className="max-w-5xl xl:max-w-6xl mx-auto">
-          {/* Two-column layout: Text left, Phone right */}
-          <div className="flex flex-col items-center lg:flex-row lg:items-end gap-12 lg:gap-16">
-            {/* Text content */}
-            <div className="flex-1 lg:pl-20">
-              {/* Our Answer intro */}
-              <div className="relative z-30 mb-8 md:mb-10">
-                <p className="text-sm uppercase tracking-widest text-white/80 font-medium mb-4">
-                  Our Answer
-                </p>
-                <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-md xl:max-w-2xl">
-                  Soberphone is a mobile app that uses social support to change your life.
-                </p>
-              </div>
-              <h3 className="font-serif font-medium tracking-tight leading-tight text-left text-4xl md:text-5xl lg:text-6xl text-white">
-                Time,<br />presence,<br />and attention.
-              </h3>
-              <p className="font-sans font-light text-xl md:text-2xl lg:text-3xl text-white text-left mt-1">
-                For loved ones. Projects. Rest.
+      <div
+        className="relative px-6 py-[120px] md:py-[152px] overflow-x-clip"
+        style={{
+          backgroundImage: "url('/images/our-answer-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#6FA3F7",
+        }}
+      >
+        <div className="relative max-w-5xl xl:max-w-6xl mx-auto">
+          {/* Text content — constrained left of the orb column */}
+          <div className="relative z-30 md:pl-12 lg:pl-20 pr-28 sm:pr-32 md:pr-44 lg:pr-52 xl:pr-60">
+            <div className="mb-8 md:mb-10">
+              <p className="text-sm uppercase tracking-widest text-white/80 font-medium mb-4">
+                Our Answer
               </p>
-              <ul className="mt-6 md:mt-8 flex flex-col gap-3">
-                <li className="flex items-center gap-4">
-                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#F4A988] shrink-0" aria-hidden />
-                  <span className="text-xl md:text-2xl text-white/90">No cold turkey.</span>
-                </li>
-                <li className="flex items-center gap-4">
-                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#FFD68A] shrink-0" aria-hidden />
-                  <span className="text-xl md:text-2xl text-white/90">No dumb phones.</span>
-                </li>
-                <li className="flex items-center gap-4">
-                  <span className="relative z-30 w-4 h-4 rounded-full bg-[#3D6BBF] shrink-0" aria-hidden />
-                  <span className="text-xl md:text-2xl text-white/90">No hyper-gamification.</span>
-                </li>
-              </ul>
-              {/* Closing line — placed above the phone on mobile/iPad portrait; the lg+ copy below sits under the row */}
-              <h3 className="lg:hidden relative z-30 mt-8 md:mt-12 font-serif font-medium tracking-tight leading-tight text-left text-3xl md:text-4xl text-white text-balance max-w-3xl">
-                Just flexible support for the screen-life balance you want.
-              </h3>
+              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-white text-balance max-w-md xl:max-w-2xl">
+                Soberphone is a mobile app that helps you build screen-life balance. Set goals, open apps with intention, and get support from friends in the moments that matter most.
+              </p>
             </div>
-
-            {/* Phone mockup */}
-            <div className="flex-shrink-0 relative lg:ml-auto lg:mr-0">
-              {/* Soft round glow behind phone, blending into the blue */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[2000px] h-[2000px] rounded-full blur-3xl z-20"
-                style={{
-                  background:
-                    "radial-gradient(circle at center, rgba(195,220,246,0.85) 0%, rgba(195,220,246,0.5) 30%, rgba(195,220,246,0.2) 55%, rgba(195,220,246,0) 75%)",
-                }}
-              />
-              <div
-                className="relative lg:-translate-x-10 z-30"
-                style={{
-                  filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))"
-                }}
-              >
-                <PhoneMockup
-                  src="/images/screen-goal-reminder.png"
-                  alt="Soberphone Goal Reminder screen"
-                  width={300}
-                  className=""
-                />
-              </div>
-            </div>
+            <h3 className="font-serif font-medium tracking-tight leading-tight text-left text-4xl md:text-5xl lg:text-6xl text-[#3D6BBF]">
+              Time,<br />presence,<br />and attention.
+            </h3>
+            <p className="font-sans font-light text-xl md:text-2xl lg:text-3xl text-[#3D6BBF] text-left mt-1">
+              For loved ones. Projects. Rest.
+            </p>
+            <ul className="mt-6 md:mt-8 flex flex-col gap-3">
+              <li className="text-sm text-[#3D6BBF]/90">No cold turkey.</li>
+              <li className="text-sm text-[#3D6BBF]/90">No dumb phones.</li>
+              <li className="text-sm text-[#3D6BBF]/90">No hyper-gamification.</li>
+            </ul>
+            <h3 className="mt-8 md:mt-12 font-serif font-medium tracking-tight leading-tight text-left text-2xl md:text-3xl lg:text-4xl text-[#3D6BBF] text-balance max-w-3xl">
+              Just flexible support for the screen-life balance you want.
+            </h3>
           </div>
 
-          {/* Closing line — lg+ only; mobile/iPad portrait has its own copy inside the text column, above the phone */}
-          <h3 className="hidden lg:block relative z-30 mt-8 md:mt-12 lg:pl-20 font-serif font-medium tracking-tight leading-tight text-left text-3xl md:text-4xl lg:text-5xl text-white text-balance max-w-3xl">
-            Just flexible support for the screen-life balance you want.
-          </h3>
+          {/* Orb progression — absolute column spanning Part 3's full height (incl. its py-[120px]/py-[152px] padding), so top (struggling) center sits on the boundary with What's the Deal and bottom (vibrant) center sits on the boundary with How It Works. Negative top/bottom MUST equal Part 3's vertical padding to extend this overlay across both section boundaries. */}
+          <div className="absolute -top-[120px] -bottom-[120px] md:-top-[152px] md:-bottom-[152px] right-0 lg:right-4 xl:right-12 w-24 sm:w-28 md:w-36 lg:w-44 xl:w-48 z-30 pointer-events-none">
+            {/* Halo centered on the orb column for soft glow */}
+            <div
+              aria-hidden
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(circle at center, rgba(195,220,246,0.5) 0%, rgba(195,220,246,0.25) 30%, rgba(195,220,246,0.08) 55%, rgba(195,220,246,0) 75%)",
+              }}
+            />
+
+            <div className="relative w-full h-full" style={{ filter: "drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2))" }}>
+              {/* Struggling — center at 0% (boundary: What's the Deal | Our Answer) */}
+              <Image src="/images/orbs/struggling.png" alt="Struggling" width={512} height={512} className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <ArrowDown aria-hidden className="absolute top-[12.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
+              <Image src="/images/orbs/difficult.png" alt="Difficult" width={512} height={512} className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <ArrowDown aria-hidden className="absolute top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
+              <Image src="/images/orbs/okay.png" alt="Okay" width={512} height={512} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <ArrowDown aria-hidden className="absolute top-[62.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
+              <Image src="/images/orbs/great.png" alt="Great" width={512} height={512} className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+              <ArrowDown aria-hidden className="absolute top-[87.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
+              {/* Vibrant — center at 100% (boundary: Our Answer | How It Works) */}
+              <Image src="/images/orbs/vibrant.png" alt="Vibrant" width={512} height={512} className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
+            </div>
+          </div>
         </div>
       </div>
     </section>

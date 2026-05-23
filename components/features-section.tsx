@@ -1,10 +1,59 @@
 "use client"
 
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { PhoneMockup } from "@/components/phone-mockup"
 import { WAITLIST_URL, BETA_URL } from "@/lib/links"
 
+type Tier = "sm" | "md" | "lg" | "xl"
+
+function useViewportTier(): Tier {
+  const [tier, setTier] = useState<Tier>("lg")
+  useEffect(() => {
+    const compute = (): Tier => {
+      const w = window.innerWidth
+      if (w >= 1280) return "xl"
+      if (w >= 1024) return "lg"
+      if (w >= 768) return "md"
+      return "sm"
+    }
+    setTier(compute())
+    const onResize = () => setTier(compute())
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
+  return tier
+}
+
 export function FeaturesSection() {
+  const tier = useViewportTier()
+  // Philosophy phone row: 3 phones across, centered, matching the How It Works
+  // phone sizing exactly.
+  const philosophyPhoneWidth = { sm: 240, md: 150, lg: 200, xl: 240 }[tier]
+
+  // Size the photo backdrop to the image's own aspect ratio (1642 × 1094) so the
+  // full photo shows edge-to-edge with nothing cropped off the sides. We match the
+  // layer height to its rendered width × ratio and let `cover` fill it exactly.
+  const PHOTO_RATIO = 1094 / 1642
+  const sheetRef = useRef<HTMLDivElement>(null)
+  const [photoHeight, setPhotoHeight] = useState<number | null>(null)
+  useEffect(() => {
+    const measure = () => {
+      const sheet = sheetRef.current
+      if (!sheet) return
+      // clientWidth is the padding-box width, which is the photo layer's width (inset-x-0).
+      setPhotoHeight(sheet.clientWidth * PHOTO_RATIO)
+    }
+    measure()
+    const t = setTimeout(measure, 300)
+    window.addEventListener("resize", measure)
+    return () => {
+      window.removeEventListener("resize", measure)
+      clearTimeout(t)
+    }
+  }, [tier])
+
   return (
     <section
       id="features"
@@ -25,7 +74,11 @@ export function FeaturesSection() {
         }}
       />
 
-      <div className="relative isolate px-6 overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)] pt-24 md:pt-32 pb-44 md:pb-56">
+      <div
+        ref={sheetRef}
+        className="relative isolate px-6 overflow-hidden rounded-t-[2.5rem] md:rounded-t-[3.5rem] shadow-[0_-12px_30px_-12px_rgba(40,50,90,0.18)] pt-24 md:pt-32 pb-44 md:pb-56"
+        style={{ backgroundColor: "#ffffff" }}
+      >
         {/* Drag Handle */}
         <div
           aria-hidden
@@ -35,16 +88,24 @@ export function FeaturesSection() {
         </div>
 
         <div
-          className="absolute inset-0 -z-10 rounded-t-[2.5rem] md:rounded-t-[3.5rem]"
+          aria-hidden
+          className="absolute inset-x-0 top-0 -z-10 rounded-t-[2.5rem] md:rounded-t-[3.5rem]"
           style={{
-            background:
-              "linear-gradient(0deg, #ffffff 0%, #ffffff 30%, #E2E8FA 100%)",
+            height: photoHeight ? `${photoHeight}px` : "65%",
+            backgroundImage: "url(/images/philosophy-bg.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, #000 0%, #000 45%, transparent 95%)",
+            maskImage:
+              "linear-gradient(to bottom, #000 0%, #000 45%, transparent 95%)",
           }}
         />
 
       {/* The Philosophy */}
       <div className="max-w-6xl mx-auto">
-        <div id="philosophy" className="relative md:ml-[110px] mt-[20px] max-w-2xl text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12 scroll-mt-56">
+        <div id="philosophy" className="relative md:ml-0 lg:ml-[110px] mt-[20px] max-w-2xl text-left border-l-2 border-[#6FA3F7]/30 pl-8 md:pl-12 scroll-mt-56">
           <p className="text-sm uppercase tracking-widest text-[#6FA3F7] font-medium mb-5">
             The Philosophy
           </p>
@@ -54,39 +115,37 @@ export function FeaturesSection() {
 
           <div className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed text-pretty">
             <p>
-              Lasting change comes from being seen, supported, and accountable to people who care about us. When we take our struggles out of isolation and embed them in community and connection, our lives begin to change at the root.
+              You can use the goal setting and unlock timer tools on their own with great success. <strong className="font-semibold">But add supporters and watch your life transform at the root.</strong>
             </p>
-            <p className="font-serif text-xl md:text-2xl text-foreground leading-snug">
-              <strong className="font-semibold text-[#6FA3F7] text-3xl md:text-4xl mr-2 align-baseline">Soberphone</strong> works where other tools don&rsquo;t because it goes beyond:
+            <p>
+              <strong className="font-serif font-semibold text-[#6FA3F7] text-3xl md:text-4xl mr-2 align-baseline">Soberphone</strong> works where other tools don&rsquo;t because lasting change comes from being seen, supported, and accountable to people who care about you. When you take your struggles out of isolation and embed them in community and connection, you go way beyond <strong className="font-semibold">willpower</strong>, <strong className="font-semibold">restriction</strong>, and <strong className="font-semibold">hyper-gamification</strong>.
             </p>
-            <ul className="mt-3 space-y-2 font-serif text-xl md:text-2xl text-foreground leading-snug">
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-[#F4A988] inline-block shrink-0" aria-hidden />
-                <strong className="font-semibold">willpower,</strong>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-[#FFD68A] inline-block shrink-0" aria-hidden />
-                <strong className="font-semibold">restriction,</strong>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-[#8FB8F9] inline-block shrink-0" aria-hidden />
-                <strong className="font-semibold">and hyper-gamification.</strong>
-              </li>
-            </ul>
           </div>
+        </div>
+
+        {/* Horizontal phone row below the philosophy text. Centered on the page,
+            matching the How It Works phone format and gaps (no arrows). Stacks at
+            sm and below. */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-[137px] md:gap-[101px] lg:gap-[137px] mt-16 md:mt-20">
+          <PhoneMockup
+            src="/images/screen-exceed-goal.png"
+            alt="Soberphone exceed-goal prompt with supporter message"
+            width={philosophyPhoneWidth}
+          />
+          <PhoneMockup
+            src="/images/screen-chat-list.png"
+            alt="Soberphone supporter chat list"
+            width={philosophyPhoneWidth}
+          />
+          <PhoneMockup
+            src="/images/screen-chat.png"
+            alt="Soberphone supporter chat"
+            width={philosophyPhoneWidth}
+          />
         </div>
       </div>
 
-      {/* Alternating stripes transition — lavender (matching the bg at the top of the section) thinning into white, echoing the blue/black stripes on the page above */}
-      <div aria-hidden className="relative -mx-6 mt-36 md:mt-[12.25rem] bg-white">
-        <div className="h-8 md:h-10 bg-[#E2E8FA]" />
-        <div className="h-6 md:h-8" />
-        <div className="h-4 md:h-5 bg-[#E2E8FA]" />
-        <div className="h-10 md:h-12" />
-        <div className="h-1.5 md:h-2 bg-[#E2E8FA]" />
-      </div>
-
-      <div className="max-w-4xl mx-auto text-center mt-20 md:mt-28">
+<div className="max-w-4xl mx-auto text-center mt-48 md:mt-64">
         <div className="flex justify-center mb-8">
           <Image
             src="/images/soberphone-logo-mark.png"

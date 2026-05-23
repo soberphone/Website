@@ -1,41 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { ArrowRight } from "lucide-react"
 import { PhoneMockup } from "@/components/phone-mockup"
-
-type Feature = {
-  title: string
-  description: string
-  image: string
-  alt: string
-}
-
-const features: Feature[] = [
-  {
-    title: "Set Goals",
-    description: "Decide your ideal limit for troublesome apps - e.g. under 30min on Instagram each day, or 0min on games between 9 and 5.",
-    image: "/images/screen-goals.png",
-    alt: "Soberphone goals dashboard",
-  },
-  {
-    title: "Open With Intention",
-    description: "Tap app to open -> decide how long to unlock for -> enjoy your use.",
-    image: "/images/screen-unlock.png",
-    alt: "Soberphone intentional unlock screen",
-  },
-  {
-    title: "Do It Together",
-    description: "Get the most out of Soberphone by inviting supporters - friends who are notified when you go over a goal. This is optional, but extremely effective and connective.",
-    image: "/images/screen-chat.png",
-    alt: "Soberphone chat with supporters",
-  },
-  {
-    title: "Visualize your progress",
-    description: "Keep an eye on your orb - it changes based on your progress. Maintain a vibrant state by meeting your goals each day. When you go over, your orb degrades a little.",
-    image: "/images/screen-orb.png",
-    alt: "Soberphone progress visualization",
-  },
-]
 
 type Tier = "sm" | "md" | "lg" | "xl"
 
@@ -78,58 +45,64 @@ export function HowItWorksSection() {
         }}
       />
 
-      {/* Striped transition: solid CTA blue stripes thin out and gaps widen as they descend into the black. The actual phone halo from EmotionalAppealSection now extends down across the section boundary and naturally tints these stripes the same way it tints the page above. */}
-      <div aria-hidden className="relative w-full">
-        <div className="h-16 md:h-20 bg-[#6FA3F7]" />
-        <div className="h-4 md:h-5" />
-        <div className="h-8 md:h-10 bg-[#6FA3F7]" />
-        <div className="h-6 md:h-8" />
-        <div className="h-4 md:h-5 bg-[#6FA3F7]" />
-        <div className="h-10 md:h-12" />
-        <div className="h-1.5 md:h-2 bg-[#6FA3F7]" />
-      </div>
-
-      <div className="px-6 pt-16 md:pt-24 max-w-6xl mx-auto">
+      <div className="px-6 pt-36 md:pt-44 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <p className="text-sm uppercase tracking-widest text-[#8FB8F9] font-medium mb-4">
             How It Works
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight text-white mb-3 text-balance">
-            Screen-life balance with the support of your friends.
+            The core components:
           </h2>
-          <p className="text-lg text-white/70 leading-relaxed text-pretty">
-            Decide what tech you struggle with, set goals for your ideal use, and add supporters &ndash; they&rsquo;ll be invited to check in when you go over a goal.
-          </p>
+          <ol className="mt-6 md:mt-8 text-left flex flex-col gap-5 md:gap-6">
+            <li className="flex gap-4 md:gap-5">
+              <span className="font-serif text-2xl md:text-3xl text-[#8FB8F9] leading-none flex-shrink-0 tabular-nums select-none" aria-hidden>1.</span>
+              <span className="text-base md:text-lg text-white/75 leading-relaxed text-pretty">
+                Decide what tech you struggle with and set goals for your ideal use.
+              </span>
+            </li>
+            <li className="flex gap-4 md:gap-5">
+              <span className="font-serif text-2xl md:text-3xl text-[#8FB8F9] leading-none flex-shrink-0 tabular-nums select-none" aria-hidden>2.</span>
+              <span className="text-base md:text-lg text-white/75 leading-relaxed text-pretty">
+                Choose how long to &ldquo;unlock&rdquo; that tech for at each open.
+              </span>
+            </li>
+            <li className="flex gap-4 md:gap-5">
+              <span className="font-serif text-2xl md:text-3xl text-[#8FB8F9] leading-none flex-shrink-0 tabular-nums select-none" aria-hidden>3.</span>
+              <span className="text-base md:text-lg text-white/75 leading-relaxed text-pretty">
+                Add supporters to motivate real change &ndash; they&rsquo;ll be invited to check in if you decide to exceed a goal.
+              </span>
+            </li>
+            <li className="flex gap-4 md:gap-5">
+              <span className="font-serif text-2xl md:text-3xl text-[#8FB8F9] leading-none flex-shrink-0 tabular-nums select-none" aria-hidden>4.</span>
+              <span className="text-base md:text-lg text-white/75 leading-relaxed text-pretty">
+                Watch your orb &ndash; it changes to reflect your progress. Keep it vibrant by meeting your goals each day.
+              </span>
+            </li>
+          </ol>
         </div>
 
-        {/* 4-column phone grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-[17px] gap-y-12 md:gap-x-[29px] md:gap-y-16 items-start">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-start text-left mx-auto"
-              style={{ width: `${phoneWidth}px` }}
-            >
-              <div className="mt-[30px] mb-6">
-                <PhoneMockup
-                  src={feature.image}
-                  alt={feature.alt}
-                  width={phoneWidth}
-                />
-              </div>
-              <p className="text-xs uppercase tracking-widest text-[#8FB8F9] font-medium mb-2">
-                {`0${i + 1}`}
-              </p>
-              <h3 className="font-serif text-lg md:text-xl font-medium leading-tight tracking-tight text-white mb-2 text-balance">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-white/70 leading-relaxed text-pretty">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+        {/* 3-phone unlock flow: locked → choose duration → app open. Arrows rotate 90° on mobile (stacked) to point down. */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-3 lg:gap-6 mb-16 md:mb-20">
+          <PhoneMockup
+            src="/images/screen-goal-reminder.png"
+            alt="Soberphone goal reminder showing locked tech"
+            width={phoneWidth}
+          />
+          <ArrowRight aria-hidden className="w-9 h-9 md:w-7 md:h-7 lg:w-9 lg:h-9 text-[#8FB8F9] rotate-90 md:rotate-0 shrink-0" />
+          <PhoneMockup
+            src="/images/screen-unlock-duration.png"
+            alt="Soberphone unlock duration picker"
+            width={phoneWidth}
+          />
+          <ArrowRight aria-hidden className="w-9 h-9 md:w-7 md:h-7 lg:w-9 lg:h-9 text-[#8FB8F9] rotate-90 md:rotate-0 shrink-0" />
+          <PhoneMockup
+            src="/images/screen-youtube.png"
+            alt="YouTube open after intentional unlock"
+            width={phoneWidth}
+          />
         </div>
+
       </div>
     </section>
   )

@@ -39,7 +39,7 @@ export function HeroSection() {
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 text-balance">
-            Find balance with a social solution that motivates real change.
+            Set goals and get support where it matters most.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center xl:items-start gap-4">
