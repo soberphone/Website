@@ -56,25 +56,25 @@ export function Header() {
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/#emotional-appeal"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-foreground hover:text-primary transition-colors"
             >
               About
             </Link>
             <Link
               href="/#how-it-works"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-foreground hover:text-primary transition-colors"
             >
               How It Works
             </Link>
             <Link
               href="/#philosophy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Philosophy
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-foreground hover:text-primary transition-colors"
             >
               Contact
             </Link>
