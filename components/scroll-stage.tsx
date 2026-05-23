@@ -23,8 +23,13 @@ export function ScrollStage() {
     const update = () => {
       const viewportHeight = window.innerHeight
       const backLayerHeight = backLayer.offsetHeight
+      // window.innerHeight excludes the bottom safe-area inset, so pinning the
+      // layer's bottom there leaves the strip behind the iOS search bar showing
+      // the grey page background. Extend past it by our own padding-bottom (which
+      // resolves env(safe-area-inset-bottom)) so the dark layer covers that strip.
+      const safeBottom = parseFloat(getComputedStyle(backLayer).paddingBottom) || 0
       backLayer.style.position = "sticky"
-      backLayer.style.top = `${viewportHeight - backLayerHeight}px`
+      backLayer.style.top = `${viewportHeight - backLayerHeight + safeBottom}px`
     }
 
     update()
@@ -45,6 +50,13 @@ export function ScrollStage() {
       <div
         ref={backLayerRef}
         className="relative z-0 w-full"
+        style={{
+          // Cover the bottom safe-area strip (behind the iOS search bar) with the
+          // quote section's dark tone instead of the grey page background. 0 on
+          // desktop, so this is a no-op there.
+          paddingBottom: "env(safe-area-inset-bottom)",
+          backgroundColor: "#232323",
+        }}
       >
         <HeroSection />
         <PhilosophySection />
