@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { PhoneMockup } from "@/components/phone-mockup"
-import { WAITLIST_URL, BETA_URL } from "@/lib/links"
+import { BETA_URL } from "@/lib/links"
 
 export function HeroSection() {
   return (
@@ -50,16 +50,6 @@ export function HeroSection() {
             >
               <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
                 Download the Beta
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="min-w-[17rem] sm:min-w-[14rem] rounded-full px-8 py-6 text-base border-[#6FA3F7] text-[#6FA3F7] hover:bg-[#6FA3F7]/10 hover:text-[#6FA3F7]"
-            >
-              <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
-                Join the Waitlist
               </a>
             </Button>
           </div>

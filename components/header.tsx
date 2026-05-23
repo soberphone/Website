@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { BETA_URL } from "@/lib/links"
+import { WAITLIST_URL } from "@/lib/links"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -82,8 +82,8 @@ export function Header() {
               asChild
               className="rounded-full px-6 bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90"
             >
-              <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-                Download the Beta
+              <a href={WAITLIST_URL} target="_blank" rel="noopener noreferrer">
+                Join the Waitlist
               </a>
             </Button>
           </div>
