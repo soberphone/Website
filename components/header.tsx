@@ -28,10 +28,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-card/80 backdrop-blur-lg border-b border-border/50 shadow-sm ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? ""
-          : "md:bg-transparent md:backdrop-blur-none md:border-transparent md:shadow-none"
+          ? "bg-card/80 backdrop-blur-lg border-b border-border/50 shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
@@ -44,10 +44,10 @@ export function Header() {
               width={180}
               height={260}
               priority
-              className="h-7 md:h-8 w-auto select-none"
+              className="h-9 md:h-10 w-auto select-none"
               draggable={false}
             />
-            <span className="font-serif text-xl md:text-2xl font-medium tracking-tight text-foreground">
+            <span className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground">
               Soberphone
             </span>
           </Link>
