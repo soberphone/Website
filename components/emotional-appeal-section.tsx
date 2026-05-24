@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowDown } from "lucide-react"
 
 export function EmotionalAppealSection() {
   return (
@@ -135,13 +134,6 @@ export function EmotionalAppealSection() {
             <div className="relative w-full h-full">
               {/* Struggling — center at 0% (boundary: What's the Deal | Our Answer) */}
               <Image src="/images/orbs/struggling.png" alt="Struggling" width={512} height={512} className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
-              <ArrowDown aria-hidden className="absolute top-[12.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/difficult.png" alt="Difficult" width={512} height={512} className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
-              <ArrowDown aria-hidden className="absolute top-[37.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/okay.png" alt="Okay" width={512} height={512} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
-              <ArrowDown aria-hidden className="absolute top-[62.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
-              <Image src="/images/orbs/great.png" alt="Great" width={512} height={512} className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
-              <ArrowDown aria-hidden className="absolute top-[87.5%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#3D6BBF]/70" />
               {/* Vibrant — center at 100% (boundary: Our Answer | How It Works) */}
               <Image src="/images/orbs/vibrant.png" alt="Vibrant" width={512} height={512} className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto select-none" draggable={false} />
             </div>
