@@ -12,7 +12,7 @@ export function HeroSection() {
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col-reverse xl:flex-row items-center gap-10 xl:gap-16 xl:pl-40 translate-y-[150px] xl:translate-y-[18px]">
         <div
-          className="flex-shrink-0 mt-[50px] xl:mt-0 xl:-ml-[100px] xl:-translate-x-[10px]"
+          className="flex-shrink-0 mt-[50px] xl:mt-0 xl:-ml-[100px] xl:-translate-x-[10px] xl:translate-y-[10px]"
           style={{ filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.25))" }}
         >
           <PhoneMockup
@@ -24,7 +24,7 @@ export function HeroSection() {
         </div>
         <div className="flex flex-col items-center text-center xl:items-start xl:text-left max-w-3xl -translate-y-[17px] xl:translate-y-[18px] xl:translate-x-[10px]">
           <h1
-            className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
+            className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance xl:-ml-[6px]"
             style={{
               backgroundImage:
                 "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
