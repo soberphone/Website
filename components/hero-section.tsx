@@ -23,15 +23,21 @@ export function HeroSection() {
           />
         </div>
         <div className="flex flex-col items-center text-center xl:items-start xl:text-left max-w-3xl -translate-y-[17px] xl:translate-y-[18px] xl:translate-x-[10px]">
-          <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap text-foreground text-balance">
+          <h1
+            className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap bg-clip-text text-transparent text-balance"
+            style={{
+              backgroundImage:
+                "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
+            }}
+          >
             Soberphone
           </h1>
 
-          <h2 className="font-sans text-lg max-[374px]:text-sm sm:text-2xl md:text-3xl font-semibold text-foreground/80 leading-snug mt-2 mb-1 whitespace-nowrap text-balance">
+          <h2 className="font-sans text-base max-[374px]:text-sm sm:text-2xl md:text-3xl font-semibold text-foreground/80 leading-snug mt-2 mb-1 whitespace-nowrap text-balance">
             Freedom from our screens. Together.
           </h2>
 
-          <p className="text-base md:text-xl text-muted-foreground/80 leading-relaxed mb-10 text-balance">
+          <p className="text-sm md:text-xl text-muted-foreground/80 leading-relaxed mb-10 text-balance">
             An app with tools and support systems to motivate real change.
           </p>
 

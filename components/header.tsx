@@ -47,7 +47,13 @@ export function Header() {
               className="h-9 md:h-10 w-auto select-none"
               draggable={false}
             />
-            <span className="font-serif text-2xl md:text-3xl font-medium tracking-tight text-foreground">
+            <span
+              className="font-serif text-2xl md:text-3xl font-medium tracking-tight bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(270deg, #B5D4FF 0%, #8FB4FF 30%, #F4A988 70%, #FFD68A 100%)",
+              }}
+            >
               Soberphone
             </span>
           </Link>
