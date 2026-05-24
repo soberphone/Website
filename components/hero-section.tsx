@@ -29,7 +29,7 @@ export function HeroSection() {
             priority
           />
         </div>
-        <div className="flex flex-col items-center text-center xl:items-start xl:text-left max-w-3xl -translate-y-[35px] xl:translate-y-0">
+        <div className="flex flex-col items-center text-center xl:items-start xl:text-left max-w-3xl -translate-y-[17px] xl:translate-y-[18px]">
           <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl xl:text-9xl font-medium leading-tight tracking-tight mb-1 sm:whitespace-nowrap text-white text-balance">
             Soberphone
           </h1>
