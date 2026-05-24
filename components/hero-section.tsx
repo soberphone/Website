@@ -39,7 +39,7 @@ export function HeroSection() {
           </h2>
 
           <p className="text-base md:text-xl text-white leading-relaxed mb-10 text-balance">
-            An app with tools and support systems that motivate real change.
+            An app with tools and support systems to motivate real change.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center xl:items-start gap-4">
