@@ -107,19 +107,17 @@ export function EmotionalAppealSection() {
         <div className="relative max-w-5xl xl:max-w-6xl mx-auto">
           {/* Text content — constrained left of the orb column */}
           <div className="relative z-30 md:pl-12 lg:pl-20 pr-28 sm:pr-32 md:pr-44 lg:pr-52 xl:pr-60">
-            <div className="mb-8 md:mb-10">
-              <p className="text-sm uppercase tracking-widest text-[#3D6BBF]/80 font-medium mb-4">
-                Our Answer
-              </p>
-              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-xl xl:max-w-4xl">
-                Soberphone is a mobile app that helps you build screen-life balance. Set goals, open apps with intention, and get support from friends in the moments that matter most.
-              </p>
-            </div>
+            <p className="text-sm uppercase tracking-widest text-[#3D6BBF]/80 font-medium mb-4">
+              Our Answer
+            </p>
             <h3 className="font-serif font-medium tracking-tight leading-tight text-left text-4xl md:text-5xl lg:text-6xl text-[#3D6BBF]">
               Time,<br />presence,<br />and attention.
             </h3>
             <p className="font-sans font-light text-xl md:text-2xl lg:text-3xl text-[#3D6BBF] text-left mt-1">
               For loved ones. Projects. Rest.
+            </p>
+            <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-xl xl:max-w-4xl mt-8 md:mt-10">
+              Soberphone is a mobile app that helps you build screen-life balance. Set goals, open apps with intention, and get support from friends in the moments that matter most.
             </p>
             <ul className="mt-6 md:mt-8 flex flex-col gap-3">
               <li className="text-sm text-[#3D6BBF]/90">No cold turkey.</li>
