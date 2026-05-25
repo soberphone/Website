@@ -111,7 +111,7 @@ export function EmotionalAppealSection() {
               <p className="text-sm uppercase tracking-widest text-[#3D6BBF]/80 font-medium mb-4">
                 Our Answer
               </p>
-              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-md xl:max-w-2xl">
+              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-xl xl:max-w-4xl">
                 Soberphone is a mobile app that helps you build screen-life balance. Set goals, open apps with intention, and get support from friends in the moments that matter most.
               </p>
             </div>
@@ -126,8 +126,8 @@ export function EmotionalAppealSection() {
               <li className="text-sm text-[#3D6BBF]/90">No dumb phones.</li>
               <li className="text-sm text-[#3D6BBF]/90">No hyper-gamification.</li>
             </ul>
-            <h3 className="mt-8 md:mt-12 font-serif font-medium tracking-tight leading-tight text-left text-2xl md:text-3xl lg:text-4xl text-[#3D6BBF] text-balance max-w-3xl">
-              Just flexible support for the screen-life balance you want.
+            <h3 className="mt-8 md:mt-12 font-serif font-medium tracking-tight leading-tight text-left text-2xl md:text-3xl lg:text-4xl text-[#3D6BBF] max-w-4xl xl:max-w-5xl">
+              Just flexible support for the screen-life<br className="hidden lg:block" /> balance you want.
             </h3>
           </div>
 
