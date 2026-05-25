@@ -80,23 +80,38 @@ export function EmotionalAppealSection() {
 
       {/* Part 3: The Solution */}
       <div
-        className="relative px-6 py-[120px] md:py-[152px] overflow-x-clip"
+        className="relative isolate px-6 py-[120px] md:py-[152px] overflow-x-clip"
         style={{
-          backgroundImage: "url('/images/our-answer-bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "#6FA3F7",
+          background:
+            "radial-gradient(circle at center, #FFFFFF 0%, #6FA3F7 100%)",
         }}
       >
+        {/* Lava-lamp drifting orb — mirrors the app's goals page (BlurredDriftingOrb).
+            Sway (horizontal) on the outer wrapper, drift (vertical) on the inner one,
+            since both animate `transform` and would otherwise clash. */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-0 left-0 animate-orb-sway">
+            <div className="animate-orb-drift">
+              <Image
+                src="/images/orb.png"
+                alt=""
+                width={300}
+                height={300}
+                draggable={false}
+                className="w-[300px] h-[300px] blur-[45px] opacity-70 select-none"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="relative max-w-5xl xl:max-w-6xl mx-auto">
           {/* Text content — constrained left of the orb column */}
           <div className="relative z-30 md:pl-12 lg:pl-20 pr-28 sm:pr-32 md:pr-44 lg:pr-52 xl:pr-60">
             <div className="mb-8 md:mb-10">
-              <p className="text-sm uppercase tracking-widest text-white/80 font-medium mb-4">
+              <p className="text-sm uppercase tracking-widest text-[#3D6BBF]/80 font-medium mb-4">
                 Our Answer
               </p>
-              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-white text-balance max-w-md xl:max-w-2xl">
+              <p className="font-serif text-2xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight text-[#3D6BBF] text-balance max-w-md xl:max-w-2xl">
                 Soberphone is a mobile app that helps you build screen-life balance. Set goals, open apps with intention, and get support from friends in the moments that matter most.
               </p>
             </div>

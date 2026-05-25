@@ -168,22 +168,36 @@
   animation: spin-slow 20s linear infinite;
 }
 
+/* Irregular multi-waypoint paths + long coprime durations (29s / 37s) so the
+   two axes almost never sync — the combined 2D motion meanders organically
+   instead of zig-zagging on a fixed period. 0% and 100% match for a seamless
+   loop (no `alternate`). */
 @keyframes orb-drift {
-  0% { transform: translateY(-5vh); }
-  100% { transform: translateY(65vh); }
+  0%   { transform: translateY(6vh); }
+  17%  { transform: translateY(44vh); }
+  31%  { transform: translateY(18vh); }
+  48%  { transform: translateY(58vh); }
+  64%  { transform: translateY(28vh); }
+  82%  { transform: translateY(50vh); }
+  100% { transform: translateY(6vh); }
 }
 
 @keyframes orb-sway {
-  0% { transform: translateX(-30px); }
-  100% { transform: translateX(calc(100vw - 320px)); }
+  0%   { transform: translateX(8vw); }
+  21%  { transform: translateX(58vw); }
+  39%  { transform: translateX(26vw); }
+  56%  { transform: translateX(68vw); }
+  73%  { transform: translateX(38vw); }
+  88%  { transform: translateX(6vw); }
+  100% { transform: translateX(8vw); }
 }
 
 .animate-orb-drift {
-  animation: orb-drift 25s ease-in-out infinite alternate;
+  animation: orb-drift 29s ease-in-out infinite;
 }
 
 .animate-orb-sway {
-  animation: orb-sway 10s ease-in-out infinite alternate;
+  animation: orb-sway 37s ease-in-out infinite;
 }
 
 @keyframes marquee-left {
