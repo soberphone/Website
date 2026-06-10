@@ -61,18 +61,6 @@ export function Header() {
           {/* Contact + CTA */}
           <div className="hidden md:flex items-center gap-6">
             <Link
-              href="/#emotional-appeal"
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/#philosophy"
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              Philosophy
-            </Link>
-            <Link
               href="/contact"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
@@ -102,20 +90,6 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg border-b border-border/50 shadow-lg">
             <div className="flex flex-col p-6 gap-4">
-              <Link
-                href="/#emotional-appeal"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base text-foreground hover:text-primary transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/#philosophy"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base text-foreground hover:text-primary transition-colors"
-              >
-                Philosophy
-              </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
