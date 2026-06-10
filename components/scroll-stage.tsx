@@ -3,7 +3,6 @@
 import { HeroSection } from "@/components/hero-section"
 import { PhilosophySection } from "@/components/philosophy-section"
 import { EmotionalAppealSection } from "@/components/emotional-appeal-section"
-import { HowItWorksSection } from "@/components/how-it-works-section"
 import { FeaturesSection } from "@/components/features-section"
 
 export function ScrollStage() {
@@ -17,7 +16,6 @@ export function ScrollStage() {
         <PhilosophySection />
       </div>
       <EmotionalAppealSection />
-      <HowItWorksSection />
       <FeaturesSection />
     </>
   )

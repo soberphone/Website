@@ -67,12 +67,6 @@ export function Header() {
               About
             </Link>
             <Link
-              href="/#how-it-works"
-              className="text-sm text-foreground hover:text-primary transition-colors"
-            >
-              How It Works
-            </Link>
-            <Link
               href="/#philosophy"
               className="text-sm text-foreground hover:text-primary transition-colors"
             >
@@ -114,13 +108,6 @@ export function Header() {
                 className="text-base text-foreground hover:text-primary transition-colors"
               >
                 About
-              </Link>
-              <Link
-                href="/#how-it-works"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-base text-foreground hover:text-primary transition-colors"
-              >
-                How It Works
               </Link>
               <Link
                 href="/#philosophy"
