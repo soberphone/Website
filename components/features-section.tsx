@@ -1,8 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { BETA_URL } from "@/lib/links"
 
 export function FeaturesSection() {
 
@@ -58,7 +56,7 @@ export function FeaturesSection() {
       </div>
 
       {/* Pre-footer CTA — visually separate from the Our Answer page above */}
-      <div className="relative px-6 pt-24 md:pt-32 pb-24 md:pb-32 bg-[#FAF5F0]">
+      <div className="relative px-6 pt-24 md:pt-32 pb-24 md:pb-32 bg-[#FAC089]">
         <div className="text-center max-w-6xl mx-auto">
           <div className="flex justify-center mb-10">
             <Image
@@ -69,23 +67,6 @@ export function FeaturesSection() {
               className="h-[28vw] max-h-[360px] w-auto select-none"
               draggable={false}
             />
-          </div>
-
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10 text-pretty">
-            Be the first to know about our launch, updates, and opportunities
-            to join the Soberphone community.
-          </p>
-
-          <div className="flex items-center justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
-            >
-              <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-                Download the Beta
-              </a>
-            </Button>
           </div>
         </div>
       </div>
