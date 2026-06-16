@@ -6,7 +6,7 @@ import { BETA_URL } from "@/lib/links"
 export function HeroSection() {
   return (
     <section
-      className="relative isolate z-30 flex flex-col items-center justify-center px-6 pt-[50px] md:pt-[65px] xl:pt-[140px] pb-12 md:pb-16 overflow-x-clip min-h-[calc(100svh-132px)] xl:min-h-[calc(100svh-42px)]"
+      className="relative isolate z-30 flex flex-col items-center justify-center px-6 pt-[50px] md:pt-[65px] xl:pt-[140px] pb-12 md:pb-16 overflow-x-clip min-h-[calc(100svh-40px)] xl:min-h-[calc(100svh-42px)]"
       style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #EAF1FC 100%)" }}
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center text-center">
