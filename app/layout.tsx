@@ -34,13 +34,13 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  // themeColor matches the hero gradient's top stop (#FFFFFF) so the iOS status
-  // bar strip (time/battery) blends into the hero page instead of showing the
-  // browser's default translucent/grey bar.
-  themeColor: '#FFFFFF',
+  // No themeColor: lets mobile browsers use their native translucent status/address
+  // bar, which blurs the page content behind it — so the bar reflects whatever
+  // section sits at the top of the viewport instead of a solid fixed color.
   // viewportFit 'cover': draw the page edge-to-edge *under* the browser bars and
-  // home-indicator safe area, so content shows through the translucent bar
-  // instead of iOS filling the safe-area strip with the grey root background.
+  // home-indicator safe area, so content shows through the translucent bar. The
+  // root background is white (see layout html/body) so any uncovered safe-area
+  // strip stays hero-white rather than the soft-lavender app background.
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
@@ -52,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${lora.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${inter.variable} ${lora.variable} bg-white`}>
+      <body className="font-sans antialiased bg-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
