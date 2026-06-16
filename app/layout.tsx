@@ -34,8 +34,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  // No themeColor: lets mobile browsers use their native translucent address bar
-  // (which blurs the page content behind it) instead of a solid gray fill.
+  // themeColor matches the hero gradient's top stop (#FFFFFF) so the iOS status
+  // bar strip (time/battery) blends into the hero page instead of showing the
+  // browser's default translucent/grey bar.
+  themeColor: '#FFFFFF',
   // viewportFit 'cover': draw the page edge-to-edge *under* the browser bars and
   // home-indicator safe area, so content shows through the translucent bar
   // instead of iOS filling the safe-area strip with the grey root background.
