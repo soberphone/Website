@@ -56,7 +56,7 @@ export function FeaturesSection() {
       </div>
 
       {/* Pre-footer CTA — visually separate from the Our Answer page above */}
-      <div className="relative px-6 pt-24 md:pt-32 pb-24 md:pb-32 bg-[#FAC089]">
+      <div className="relative px-6 pt-24 md:pt-32 pb-24 md:pb-32 bg-[#FBC987]">
         <div className="text-center max-w-6xl mx-auto">
           <div className="flex justify-center mb-10">
             <Image
