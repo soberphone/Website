@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { BETA_URL } from "@/lib/links"
+import { APP_STORE_URL } from "@/lib/links"
 
 export function HeroSection() {
   return (
@@ -35,8 +35,8 @@ export function HeroSection() {
             size="lg"
             className="min-w-[17rem] sm:min-w-[14rem] rounded-full px-8 py-6 text-base bg-[#6FA3F7] text-white hover:bg-[#6FA3F7]/90 shadow-lg"
           >
-            <a href={BETA_URL} target="_blank" rel="noopener noreferrer">
-              Download the Beta
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              Download Now
             </a>
           </Button>
         </div>
